@@ -29,8 +29,30 @@
 \subsection{Architecture logique}
 \begin{frame}
 
+
+\begin{minipage}[t]{0.47\linewidth}
+	\begin{figure}
+		\includegraphics[height=6cm]{arch_core.png}
+		\caption{Core BR/EDR}
+	\end{figure}
+\end{minipage}
 \begin{minipage}[t]{0.45\linewidth}
-graph
+	\begin{figure}
+		\includegraphics[height=6cm]{arch_core_ble.png}
+		\caption{Core BLE}
+	\end{figure}
+\end{minipage}
+% ici schema diff BT/BLE de bt.org
+\end{frame}
+
+
+\begin{frame}
+
+\begin{minipage}[t]{0.47\linewidth}
+	\begin{figure}
+		\includegraphics[height=6cm]{arch_core_ble.png}
+		\caption{Core BLE}
+	\end{figure}
 \end{minipage}
 \begin{minipage}[t]{0.45\linewidth}
 	\begin{block}{Link Layer}
@@ -57,13 +79,53 @@ graph
 
 \subsection{Attributs}
 \begin{frame}
+\begin{columns}[t]
+\begin{column}{0.45\linewidth}
+	\begin{block}{Attribut}
+		\begin{itemize}
+			\item Type : UUID
+			\item Permissions : \begin{itemize}
+						\item R/W
+						\item Encryption
+						\item Autorisation
+					\end{itemize}
+			\item Valeur
+			\item Handle : Adresse
+		\end{itemize}
+	\end{block}
+\end{column}
+\begin{column}[t]{0.45\linewidth}
 
-\begin{minipage}[t]{0.45\linewidth}
-\end{minipage}
-\begin{minipage}[t]{0.45\linewidth}
-\begin{block}{GATT}
-\end{block}
-\end{minipage}
+	\begin{block}{Services}
+		Regroupe des :
+		\begin{columns}[T]
+		\begin{column}{0.90\textwidth}
+		\begin{block}{Caractéristiques}
+			\begin{itemize}
+				\item Déclaration
+				\item Valeur
+				\item Et parfois :
+			\end{itemize}
+			\begin{columns}[T]
+			\begin{column}{0.90\textwidth}
+			\begin{block}{Descripteurs}
+			Métadonnées sur la caractéristique
+			\end{block}
+			\end{column}
+			\end{columns}
+		\end{block}
+		\end{column}
+		\end{columns}
+	\end{block}
+
+\end{column}
+\end{columns}
 \end{frame}
 
-
+\begin{frame}
+	\begin{figure}
+		\includegraphics[height=5cm]{gatt.png}
+		\caption{Exemple de service GATT}
+	\end{figure}
+{\tiny "Getting started with bluetooth low energy", R.Davidson, Akiba, Carles Cufí, Kevin Townsend, O'Reilly}
+\end{frame}
