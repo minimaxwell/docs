@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg14975"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="bluetoothd.svg">
+  <defs
+     id="defs14977" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="161.33632"
+     inkscape:cy="679.07979"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid14983" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata14980">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ac9393;fill-opacity:1;stroke:#000000;stroke-width:0.80087447;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14987"
+       width="499.89911"
+       height="471.3277"
+       x="140.05045"
+       y="183.8412" />
+    <rect
+       style="fill:#c8b7b7;fill-opacity:1;stroke:#000000;stroke-width:2.10077095;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14989"
+       width="461.45636"
+       height="218.59923"
+       x="160.70039"
+       y="412.34827" />
+    <rect
+       style="fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:0.7287668;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14993"
+       width="140.32837"
+       height="80.328369"
+       x="180.01436"
+       y="532.7337" />
+    <rect
+       style="fill:#c8b7b7;fill-opacity:1;stroke:#000000;stroke-width:0.97640455;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14989-5"
+       width="166.15216"
+       height="131.15216"
+       x="160.13821"
+       y="251.07181" />
+    <rect
+       style="fill:#c8b7b7;fill-opacity:1;stroke:#000000;stroke-width:0.97640455;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14989-5-8"
+       width="166.15216"
+       height="131.15216"
+       x="349.42392"
+       y="251.78607" />
+    <rect
+       style="fill:#e3dbdb;fill-opacity:1;stroke:#000000;stroke-width:0.78743243;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14995"
+       width="419.91257"
+       height="50.626854"
+       x="180.04372"
+       y="373.12021" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:34.12735367px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="288.98837"
+       y="432.3555"
+       id="text14997"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0518559,0.95070058)"><tspan
+         sodipodi:role="line"
+         id="tspan14999"
+         x="288.98837"
+         y="432.3555">API DBUS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="149.28571"
+       y="219.50507"
+       id="text15001"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan15003"
+         x="149.28571"
+         y="219.50507">userspace</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="281.42856"
+       y="495.21936"
+       id="text15005"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan15007"
+         x="281.42856"
+         y="495.21936">bluetoothd</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="207.14285"
+       y="587.36218"
+       id="text15009"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan15011"
+         x="207.14285"
+         y="587.36218">SDP</tspan></text>
+    <rect
+       style="fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:0.8577984;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.85779837, 0.85779837;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect15013"
+       width="180.55649"
+       height="79.842201"
+       x="330.07889"
+       y="532.4411" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="343.57144"
+       y="580.93359"
+       id="text15555"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan15557"
+         x="343.57144"
+         y="580.93359">plugins</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="410"
+       y="322.36221"
+       id="text15595"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan15597"
+         x="410"
+         y="322.36221">...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:34.92964935px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="169.48413"
+       y="296.79404"
+       id="text15599"
+       sodipodi:linespacing="125%"
+       transform="scale(0.9963074,1.0037063)"><tspan
+         sodipodi:role="line"
+         id="tspan15601"
+         x="169.48413"
+         y="296.79404">Profils</tspan><tspan
+         sodipodi:role="line"
+         x="169.48413"
+         y="340.45609"
+         id="tspan15603">externes</tspan></text>
+  </g>
+</svg>

@@ -1,4 +1,98 @@
-\section{Bluez : Kernel}
+\subsection{Bluez : Kernel}
+
+%%%%%%%%%%%%%%%%%%%% HCI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-Intro
+\begin{minipage}[t]{0.60\linewidth}
+	\begin{figure}
+		\includegraphics[height=5cm]{bluez_kernel_hci.png}
+		\caption{Host to Controller Interface}
+	\end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.30\linewidth}
+	\begin{block}{HCI}
+		\begin{itemize}
+			\item Uniformisation
+			\item Abstraction
+		\end{itemize}
+		Commandes : 
+		\begin{itemize}
+			\item Données
+			\item Configuration
+			\item Évènements
+		\end{itemize}
+	\end{block}
+\end{minipage}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%% HCI MGMT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\begin{minipage}[t]{0.60\linewidth}
+	\begin{figure}
+		\includegraphics[height=5cm]{bluez_kernel_hci_sock.png}
+		\caption{Management interface}
+	\end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.30\linewidth}
+	\begin{block}{mgmt socket}
+		\begin{itemize}
+			\item Uniformisation
+			\item Abstraction
+		\end{itemize}
+		Commandes : 
+		\begin{itemize}
+			\item Données
+			\item Configuration
+			\item Évènements
+		\end{itemize}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%% L2CAP SOCKET %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\begin{minipage}[t]{0.60\linewidth}
+	\begin{figure}
+		\includegraphics[height=5cm]{bluez_kernel_l2cap_sock.png}
+		\caption{L2CAP}
+	\end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.30\linewidth}
+	\begin{block}{l2cap socket}
+		\begin{itemize}
+			\item Uniformisation
+			\item Abstraction
+		\end{itemize}
+		Commandes : 
+		\begin{itemize}
+			\item Données
+			\item Configuration
+			\item Évènements
+		\end{itemize}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%% RFCOMM / BNEP SOCKET %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\begin{minipage}[t]{0.60\linewidth}
+	\begin{figure}
+		\includegraphics[height=5cm]{bluez_kernel.png}
+		\caption{RFCOMM, BNEP, etc.}
+	\end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.30\linewidth}
+	\begin{block}{Protocoles}
+		\begin{itemize}
+			\item Uniformisation
+			\item Abstraction
+		\end{itemize}
+		Commandes : 
+		\begin{itemize}
+			\item Données
+			\item Configuration
+			\item Évènements
+		\end{itemize}
+	\end{block}
+\end{minipage}
+\end{frame}
+
