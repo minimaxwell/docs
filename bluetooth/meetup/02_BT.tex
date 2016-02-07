@@ -70,24 +70,77 @@
 \end{frame}
 
 \begin{frame}
+\begin{minipage}[t]{0.60\linewidth}
 	\begin{figure}
-		\includegraphics[height=6cm]{arch_log_hci.png}
+		\includegraphics[height=5.5cm]{arch_log_hci.png}
 		\caption{Host to Controller Interface}
 	\end{figure}
-\end{frame}
+\end{minipage}
+\begin{minipage}[t]{0.30\linewidth}
+	\begin{block}{HCI}
+		\begin{itemize}
+			\item Uniformisation
+			\item Abstraction
+		\end{itemize}
+		Commandes : 
+		\begin{itemize}
+			\item Données
+			\item Configuration
+			\item Évènements
+		\end{itemize}
+	\end{block}
+\end{minipage}
 
+\end{frame}
 \begin{frame}
+\begin{minipage}[t]{0.60\linewidth}
 \begin{figure}
-\includegraphics[height=6cm]{arch_log_l2cap.png}
+\includegraphics[height=5cm]{arch_log_l2cap.png}
 \caption{Logical Link Control and Adaptation Protocol}
 \end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.30\linewidth}
+	\begin{block}{L2CAP}
+		Socle pour de nombreux profils :
+		\begin{itemize}
+			\item Multiplexage
+			\item Buffering
+			\item QoS
+			\item Scheduling
+		\end{itemize}
+	\end{block}
+\end{minipage}
+
+
 \end{frame}
 
 \begin{frame}
+\begin{minipage}[t]{0.60\linewidth}
 \begin{figure}
-\includegraphics[height=6cm]{arch_log_all.png}
+\includegraphics[height=5cm]{arch_log_all.png}
 \caption{Profils}
 \end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.38\linewidth}
+	\begin{block}{Protocoles}
+		\begin{itemize}
+			\item RFCOMM
+			\item BNEP
+			\item AVCTP { \tiny( controle A/V )}
+			\item AVDTP { \tiny ( transport  A/V )}
+		\end{itemize}
+	\end{block}
+	\begin{block}{Profils}
+		\begin{itemize}
+			\item SPP
+			\item HID
+			\item PAN
+			\item PBA
+		\end{itemize}
+	\end{block}
+\end{minipage}
+
+
 \end{frame}
 
 \subsection{Appairage}
