@@ -1,0 +1,2 @@
+oFono : https://padovan.org/blog/2010/02/handsfree-profile-into-bluez-and-ofono/
+https://bugs.freedesktop.org/show_bug.cgi?id=73325

@@ -2,7 +2,7 @@
 \begin{frame}
 \begin{minipage}[t]{0.60\linewidth}
 	\begin{figure}
-		\includegraphics[height=5cm]{bluetoothd.png}
+		\includegraphics[height=9cm]{bluetoothd.png}
 		\caption{bluetoothd}
 	\end{figure}
 \end{minipage}
@@ -23,45 +23,114 @@
 \end{frame}
 
 \begin{frame}
-\begin{minipage}[t]{0.60\linewidth}
 	\begin{figure}
-		\includegraphics[height=5cm]{bluetoothd.png}
+		\includegraphics[height=3cm]{profiles_externes.png}
 		\caption{Profils Externes}
 	\end{figure}
-\end{minipage}
-\begin{minipage}[t]{0.30\linewidth}
-	\begin{block}{oFono}
-		\begin{itemize}
-			\item Uniformisation
-			\item Abstraction
-		\end{itemize}
-	\end{block}
-	\begin{block}{connman}
-		\begin{itemize}
-			\item Uniformisation
-			\item Abstraction
-		\end{itemize}
-	\end{block}
-	\begin{block}{pulse audio}
-		\begin{itemize}
-			\item Uniformisation
-			\item Abstraction
-		\end{itemize}
-	\end{block}
-\end{minipage}
+	\begin{center}
+\begin{columns}[t]
+	\begin{column}{0.30\linewidth}
+		\begin{block}{oFono}
+			\begin{itemize}
+				\item Gestion Téléphonie
+				\item HFP / HSP
+			\end{itemize}
+		\end{block}
+	\end{column}
+	\begin{column}{0.30\linewidth}
+		\begin{block}{connman}
+			\begin{itemize}
+				\item PAN ( NAP )
+			\end{itemize}
+		\end{block}
+		\begin{block}{obexd}
+			\begin{itemize}
+				\item OBEX, OPP
+			\end{itemize}
+		\end{block}
+	\end{column}
+	\begin{column}{0.30\linewidth}
+		\begin{block}{pulse audio}
+			\begin{itemize}
+				\item AD2P
+				\item Gateway HFP
+			\end{itemize}
+		\end{block}
+	\end{column}
+\end{columns}
+\end{center}
 \end{frame}
 
 \begin{frame}
-ofono connman pulseaudio
+\begin{center}\huge Outils\end{center}
+	\begin{columns}[t]
+		\begin{column}{0.50\linewidth}
+			\begin{block}{bluetoothctl}
+				\begin{itemize}
+					\item Appairage
+					\item SDP
+				\end{itemize}
+			\end{block}
+			\begin{block}{obexctl}
+				\begin{itemize}
+					\item OBEX
+					\item FTP
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{0.50\linewidth}
+			\begin{block}{btmgmt}
+				\begin{itemize}
+					\item mgmt API
+					\item Low Energy config.
+				\end{itemize}
+			\end{block}
+			\begin{block}{hcitool / hciconfig}
+				\begin{itemize}
+					\item HCI brut
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
 \end{frame}
 
-\begin{frame}
-hcitool hciconfig hci* btmon
+\begin{frame}[fragile]
+\begin{center}\huge Outils\end{center}
+	\begin{columns}[t]
+		\begin{column}{0.50\linewidth}
+			\begin{block}{btmon}
+			\end{block}
+			\begin{block}{hcidump}
+			\end{block}
+		\end{column}
+		\begin{column}{0.50\linewidth}
+			\begin{itemize}
+				\item \textbf{hciattach} \\ \verb+ hci over UART+
+				\item \textbf{l2ping} \\ \verb+ test L2CAP+
+				\item \textbf{rfcomm} \\ \verb+ gestion RFCOMM / SPP+
+				\item \textbf{sdptool} \\ \verb+ gestion SDP+
+			\end{itemize}
+		\end{column}
+	\end{columns}
 \end{frame}
 
+
 \begin{frame}
-btgatt-client + example*
+\begin{center}\huge Outils GATT\end{center}
+	\begin{columns}[t]
+		\begin{column}{0.50\linewidth}
+			\begin{block}{btgatt-client}
+			\end{block}
+			\begin{block}{btgatt-server}
+			\end{block}
+		\end{column}
+		\begin{column}{0.50\linewidth}
+			\begin{block}{gatttool}
+			\end{block}
+		\end{column}
+	\end{columns}
 \end{frame}
+
 
 \begin{frame}
 API
