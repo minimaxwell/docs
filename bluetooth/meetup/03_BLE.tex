@@ -1,29 +1,34 @@
 \section{Bluetooth Low Energy}
+\subsection{Présentation}
 \begin{frame}
-
-\begin{minipage}[t]{0.45\linewidth}
-\begin{figure}
-\includegraphics[height=3.25cm]{bt_logo_smart_and_ready.jpg}
-\caption{Logos Bluetooth Low Energy}
-\end{figure}
-
-\end{minipage}
-\begin{minipage}[t]{0.52\linewidth}
-\begin{block}{Bluetooth Smart}
-\begin{itemize}
-\item 2006 : Wibree ( Nokia )
-\item 2010 : Bluetooth 4.0
-\end{itemize}
-\end{block}
-\begin{block}{Caractéristiques}
-\begin{itemize}
-\item 2.4 GHz
-\item 40 cannaux
-\item 1 Mbit/s
-\item Conso entre 0.01W et 0.5W
-\end{itemize}
-\end{block}
-\end{minipage}
+	\begin{minipage}[t]{0.45\linewidth}
+	\uncover<2->{
+		\begin{figure}
+			\includegraphics[height=3.25cm]{bt_logo_smart_and_ready.jpg}
+			\caption{Logos Bluetooth Low Energy}
+		\end{figure}
+	}
+	\end{minipage}
+	\begin{minipage}[t]{0.52\linewidth}
+		\uncover<1->{
+		\begin{block}{Bluetooth Smart}
+			\begin{itemize}
+				\item 2006 : Wibree ( Nokia )
+				\item 2010 : Bluetooth 4.0
+			\end{itemize}
+		\end{block}
+		}
+		\uncover<3->{
+		\begin{block}{Caractéristiques}
+			\begin{itemize}
+				\item 2.4 GHz
+				\item 40 cannaux
+				\item 1 Mbit/s
+				\item Conso entre 0.01W et 0.5W
+			\end{itemize}
+		\end{block}
+		}
+	\end{minipage}
 \end{frame}
 
 \subsection{Architecture logique}
@@ -76,28 +81,33 @@
 \end{frame}
 
 \begin{frame}
-\begin{minipage}[t]{0.60\linewidth}
-\begin{figure}
-\includegraphics[height=5cm]{arch_log_all_ble.png}
-\caption{ATTributes / Generic ATTributes}
-\end{figure}
-\end{minipage}
-\begin{minipage}[t]{0.38\linewidth}
-	\begin{block}{ATT}
-		\begin{itemize}
-			\item SDP, Low Energy
-		\end{itemize}
-	\end{block}
-	\begin{block}{GATT}
-		Profil BLE
-		\begin{itemize}
-			\item Client
-			\item Serveur
-		\end{itemize}
-	\end{block}
-
-\end{minipage}
-
+	\begin{minipage}[t]{0.60\linewidth}
+		\uncover<1->{
+			\begin{figure}
+				\includegraphics[height=5cm]{arch_log_all_ble.png}
+				\caption{ATTributes / Generic ATTributes}
+			\end{figure}
+		}
+	\end{minipage}
+	\begin{minipage}[t]{0.38\linewidth}
+		\uncover<2->{
+		\begin{block}{ATT}
+			\begin{itemize}
+				\item Protocole
+				\item Transport d'attributs
+			\end{itemize}
+		\end{block}
+		}
+		\uncover<3->{
+		\begin{block}{GATT}
+			Profil BLE
+			\begin{itemize}
+				\item Client
+				\item Serveur
+			\end{itemize}
+		\end{block}
+		}
+	\end{minipage}
 \end{frame}
 
 
@@ -105,6 +115,8 @@
 \begin{frame}
 \begin{columns}[t]
 \begin{column}{0.45\linewidth}
+\begin{center} \huge GATT \end{center}
+	\uncover<2->{
 	\begin{block}{Attribut}
 		\begin{itemize}
 			\item Type : UUID
@@ -117,31 +129,39 @@
 			\item Handle : Adresse
 		\end{itemize}
 	\end{block}
+}
 \end{column}
 \begin{column}[t]{0.45\linewidth}
-
+	\uncover<3->{
 	\begin{block}{Services}
+		\uncover<4->{
 		Regroupe des :
 		\begin{columns}[T]
 		\begin{column}{0.90\textwidth}
 		\begin{block}{Caractéristiques}
+			\uncover<5->{
 			\begin{itemize}
 				\item Déclaration
 				\item Valeur
-				\item Et parfois :
+				\item<6-> Et parfois :
 			\end{itemize}
 			\begin{columns}[T]
 			\begin{column}{0.90\textwidth}
+				\uncover<7->{
+					\vspace{-0.5cm}
 			\begin{block}{Descripteurs}
 			Métadonnées sur la caractéristique
+		}
 			\end{block}
+		}
 			\end{column}
 			\end{columns}
 		\end{block}
 		\end{column}
 		\end{columns}
+	}
 	\end{block}
-
+}
 \end{column}
 \end{columns}
 \end{frame}

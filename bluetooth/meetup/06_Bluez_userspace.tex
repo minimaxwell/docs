@@ -24,70 +24,85 @@
 		\includegraphics[height=3cm]{profiles_externes.png}
 		\caption{Profils Externes}
 	\end{figure}
-	\begin{center}
-\begin{columns}[t]
+\vspace{-0.7cm} % :(
+\begin{columns}[b]
 	\begin{column}{0.30\linewidth}
+		\uncover<1->{
 		\begin{block}{oFono}
 			\begin{itemize}
 				\item Gestion Téléphonie
 				\item HFP / HSP
 			\end{itemize}
 		\end{block}
+	}
 	\end{column}
 	\begin{column}{0.30\linewidth}
+		\uncover<2->{
 		\begin{block}{connman}
 			\begin{itemize}
 				\item PAN ( NAP )
 			\end{itemize}
 		\end{block}
+	}
+	\uncover<3->{
 		\begin{block}{obexd}
 			\begin{itemize}
 				\item OBEX, OPP
 			\end{itemize}
 		\end{block}
+	}
 	\end{column}
 	\begin{column}{0.30\linewidth}
+		\uncover<4->{
 		\begin{block}{pulse audio}
 			\begin{itemize}
 				\item AD2P
 				\item Gateway HFP
 			\end{itemize}
 		\end{block}
+	}
 	\end{column}
 \end{columns}
-\end{center}
 \end{frame}
 
 \begin{frame}
 \begin{center}\huge Outils\end{center}
 	\begin{columns}[t]
 		\begin{column}{0.50\linewidth}
+			\uncover<1->{
 			\begin{block}{bluetoothctl}
 				\begin{itemize}
 					\item Appairage
 					\item SDP
 				\end{itemize}
 			\end{block}
+		}
+		\uncover<2->{
 			\begin{block}{obexctl}
 				\begin{itemize}
 					\item OBEX
 					\item FTP
 				\end{itemize}
 			\end{block}
+		}
 		\end{column}
 		\begin{column}{0.50\linewidth}
+			\uncover<3->{
 			\begin{block}{btmgmt}
 				\begin{itemize}
 					\item mgmt API
-					\item Low Energy config.
+					\item Configuration
 				\end{itemize}
 			\end{block}
+		}
+		\uncover<4->{
 			\begin{block}{hcitool / hciconfig}
 				\begin{itemize}
 					\item HCI brut
-					\item config.
+					\item Configuration
 				\end{itemize}
 			\end{block}
+		}
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -96,12 +111,15 @@
 \begin{center}\huge Outils\end{center}
 	\begin{columns}[t]
 		\begin{column}{0.50\linewidth}
+			\uncover<1->{
 			\begin{block}{hcidump}
 				\begin{itemize}
 					\item Log HCI
 					\item Filtrage protocoles
 				\end{itemize}
 			\end{block}
+		}
+		\uncover<2->{
 			\begin{block}{btmon}
 				\begin{itemize}
 					\item Log HCI
@@ -109,13 +127,14 @@
 					\item Dump btsnoop ( wireshark )
 				\end{itemize}
 			\end{block}
+		}
 		\end{column}
 		\begin{column}{0.50\linewidth}
 			\begin{itemize}
-				\item \textbf{hciattach} \\ \verb+ hci over UART+
-				\item \textbf{l2ping} \\ \verb+ test L2CAP+
-				\item \textbf{rfcomm} \\ \verb+ gestion RFCOMM / SPP+
-				\item \textbf{sdptool} \\ \verb+ gestion SDP+
+				\item<3-> \textbf{hciattach} \\ \verb+ hci over UART+
+				\item<4-> \textbf{l2ping} \\ \verb+ test L2CAP+
+				\item<5-> \textbf{rfcomm} \\ \verb+ gestion RFCOMM / SPP+
+				\item<6-> \textbf{sdptool} \\ \verb+ gestion SDP+
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -126,6 +145,7 @@
 \begin{center}\huge Outils GATT\end{center}
 	\begin{columns}[t]
 		\begin{column}{0.50\linewidth}
+			\uncover<1->{
 			\begin{block}{btgatt-client}
 				\begin{itemize}
 					\item Connexion GATT
@@ -133,14 +153,18 @@
 					\item Découverte services
 				\end{itemize}
 			\end{block}
+		}
+		\uncover<3->{
 			\begin{block}{btgatt-server}
 				\begin{itemize}
 					\item Test GATT
 					\item Intéractif
 				\end{itemize}
 			\end{block}
+		}
 		\end{column}
 		\begin{column}{0.50\linewidth}
+			\uncover<2->{
 			\begin{block}{gatttool}
 				\begin{itemize}
 					\item Connexion GATT
@@ -148,13 +172,26 @@
 					\item Remplacé par btgatt-client
 				\end{itemize}
 			\end{block}
+		}
 		\end{column}
 	\end{columns}
 \end{frame}
 
 
 \begin{frame}
-API
+	\center{\huge HCI lib}
+	\begin{itemize}
+		\item Accès HCI
+		\item Langage C, userspace
+		\item Configuration précise :
+			\begin{itemize}
+					\item Advertising LE
+					\item Commandes constructeur
+			\end{itemize}
+		\item Utilisateurs avertis
+	\end{itemize}
 \end{frame}
 
-
+\begin{frame}
+\begin{center}\huge Merci !\end{center}
+\end{frame}

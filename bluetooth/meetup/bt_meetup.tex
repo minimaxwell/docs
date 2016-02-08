@@ -19,7 +19,17 @@
 		\tableofcontents[currentsection, hideothersubsections]
 	\end{frame}
 }
+\beamertemplatenavigationsymbolsempty{} % /o\ Pas de symboles de nav
 
+% Numeros de slides
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+\setbeamercolor{footline}{fg=blue}
+\setbeamerfont{footline}{series=\bfseries}
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
 \setbeamerfont{caption}{size=\tiny}
     \begin{frame}
