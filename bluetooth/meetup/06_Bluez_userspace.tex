@@ -2,21 +2,18 @@
 \begin{frame}
 \begin{minipage}[t]{0.60\linewidth}
 	\begin{figure}
-		\includegraphics[height=9cm]{bluetoothd.png}
+		\includegraphics[height=5cm]{bluetoothd.png}
 		\caption{bluetoothd}
 	\end{figure}
 \end{minipage}
 \begin{minipage}[t]{0.30\linewidth}
 	\begin{block}{Démon bluetoothd}
 		\begin{itemize}
-			\item Uniformisation
-			\item Abstraction
-		\end{itemize}
-		Commandes : 
-		\begin{itemize}
-			\item Données
-			\item Configuration
-			\item Évènements
+			\item Serveur SDP
+			\item Gestion sockets
+			\item Plugins
+			\item Agents d'appairage
+			\item API DBus
 		\end{itemize}
 	\end{block}
 \end{minipage}
@@ -88,6 +85,7 @@
 			\begin{block}{hcitool / hciconfig}
 				\begin{itemize}
 					\item HCI brut
+					\item config.
 				\end{itemize}
 			\end{block}
 		\end{column}
@@ -98,9 +96,18 @@
 \begin{center}\huge Outils\end{center}
 	\begin{columns}[t]
 		\begin{column}{0.50\linewidth}
-			\begin{block}{btmon}
-			\end{block}
 			\begin{block}{hcidump}
+				\begin{itemize}
+					\item Log HCI
+					\item Filtrage protocoles
+				\end{itemize}
+			\end{block}
+			\begin{block}{btmon}
+				\begin{itemize}
+					\item Log HCI
+					\item Log bluetoothd
+					\item Dump btsnoop ( wireshark )
+				\end{itemize}
 			\end{block}
 		\end{column}
 		\begin{column}{0.50\linewidth}
@@ -120,12 +127,26 @@
 	\begin{columns}[t]
 		\begin{column}{0.50\linewidth}
 			\begin{block}{btgatt-client}
+				\begin{itemize}
+					\item Connexion GATT
+					\item Notifications
+					\item Découverte services
+				\end{itemize}
 			\end{block}
 			\begin{block}{btgatt-server}
+				\begin{itemize}
+					\item Test GATT
+					\item Intéractif
+				\end{itemize}
 			\end{block}
 		\end{column}
 		\begin{column}{0.50\linewidth}
 			\begin{block}{gatttool}
+				\begin{itemize}
+					\item Connexion GATT
+					\item Découverte services
+					\item Remplacé par btgatt-client
+				\end{itemize}
 			\end{block}
 		\end{column}
 	\end{columns}
