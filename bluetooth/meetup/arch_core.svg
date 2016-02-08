@@ -25,18 +25,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="348.14347"
-     inkscape:cy="465.89136"
+     inkscape:zoom="1.979899"
+     inkscape:cx="186.38988"
+     inkscape:cy="487.35999"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1855"
-     inkscape:window-height="1056"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
+     inkscape:window-width="1920"
+     inkscape:window-height="1031"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:object-paths="true">
+     inkscape:object-paths="true"
+     inkscape:snap-grids="false"
+     showguides="false">
     <inkscape:grid
        type="xygrid"
        id="grid3338" />
@@ -49,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -107,30 +109,39 @@
        x="78.510269"
        y="563.72961" />
     <rect
-       style="fill:#ac9393"
-       id="rect3344"
-       width="240.71428"
-       height="60"
-       x="120"
-       y="532.36218" />
-    <rect
        style="fill:#e3dbdb"
        id="rect3352"
        width="260"
        height="50"
        x="110"
        y="642.36218" />
+    <path
+       sodipodi:type="star"
+       style="fill:#afc6e9;fill-opacity:1;stroke:#000000;stroke-width:1.00031066;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.39195981"
+       id="path3436"
+       sodipodi:sides="6"
+       sodipodi:cx="179.28571"
+       sodipodi:cy="561.64795"
+       sodipodi:r1="28.175833"
+       sodipodi:r2="24.400988"
+       sodipodi:arg1="0.53172407"
+       sodipodi:arg2="1.0553228"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 203.57142,575.93366 -24.51465,13.88919 -24.28571,-14.28571 0.22893,-28.17491 24.51465,-13.88918 24.28571,14.28571 z"
+       transform="matrix(2.0736267,0,0,1.3300337,-186.41447,-183.08993)" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="195.71429"
-       y="575.2193"
+       x="147.85715"
+       y="575.93359"
        id="text3354"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3356"
-         x="195.71429"
-         y="575.2193">HCI</tspan></text>
+         x="147.85715"
+         y="575.93359">HCI</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:36.10676193px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -208,5 +219,61 @@
          id="tspan5652"
          x="80.242577"
          y="738.95673">Controller</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="fill:#afc6e9;fill-opacity:1;stroke:#000000;stroke-width:1.00031066;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.39195981"
+       id="path3436-2"
+       sodipodi:sides="6"
+       sodipodi:cx="179.28571"
+       sodipodi:cy="561.64795"
+       sodipodi:r1="28.175833"
+       sodipodi:r2="24.400988"
+       sodipodi:arg1="0.53172407"
+       sodipodi:arg2="1.0553228"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 203.57142,575.93366 -24.51465,13.88919 -24.28571,-14.28571 0.22893,-28.17491 24.51465,-13.88918 24.28571,14.28571 z"
+       transform="matrix(1.0269488,0,0,1.3008011,84.454186,-166.40099)" />
+    <path
+       sodipodi:type="star"
+       style="fill:#afc6e9;fill-opacity:1;stroke:#000000;stroke-width:1.00031066;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.39195981"
+       id="path3436-2-0"
+       sodipodi:sides="6"
+       sodipodi:cx="179.28571"
+       sodipodi:cy="561.64795"
+       sodipodi:r1="28.175833"
+       sodipodi:r2="24.400988"
+       sodipodi:arg1="0.53172407"
+       sodipodi:arg2="1.0553228"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 203.57142,575.93366 -24.51465,13.88919 -24.28571,-14.28571 0.22893,-28.17491 24.51465,-13.88918 24.28571,14.28571 z"
+       transform="matrix(1.0265536,0,0,1.3452289,144.88219,-192.11147)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:21.50180817px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="246.81244"
+       y="568.94696"
+       id="text4268"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99617201,1.0038427)"><tspan
+         sodipodi:role="line"
+         id="tspan4270"
+         x="246.81244"
+         y="568.94696">SCO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:21.50180817px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="309.52197"
+       y="569.81531"
+       id="text4268-9"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99617201,1.0038427)"><tspan
+         sodipodi:role="line"
+         id="tspan4270-3"
+         x="309.52197"
+         y="569.81531">ACL</tspan></text>
   </g>
 </svg>

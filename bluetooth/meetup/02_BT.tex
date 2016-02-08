@@ -10,12 +10,14 @@
 		}
 	\end{minipage}\hfill
 	\begin{minipage}[t]{0.72\linewidth}
+		{ \footnotesize
 		\uncover<1->{
 			\begin{block}{Historique}
 				\begin{itemize}
 					\item 1994 : Création ( Ericsson )
 					\item 1998 : SIG (Ericsson, Intel, Nokia, Toshiba)
 					\item 1999 : v1.0
+					\item 2004 : v2.0 : Basic Rate / Enhanced Data Rate
 					\item 2010 : v4.0 Low Energy
 					\item 2014 : v4.2
 				\end{itemize}
@@ -25,13 +27,13 @@
 			\begin{block}{Caractéristiques physiques}
 				\begin{itemize}
 					\item 2.4 GHz
-					\item 10m ( class 2 )
 					\item Max 24Mb/s
 					\item 79 cannaux, AFH
 					\item Conso : 1W
 				\end{itemize}
 			\end{block}
 		}
+	}
 	\end{minipage}
 \end{frame}
 
@@ -49,26 +51,34 @@
 	}
 	\end{minipage}
 	\begin{minipage}[t]{0.52\linewidth}
+		{ \footnotesize
 		\uncover<2->{
 		\begin{block}{Host}
 			\begin{itemize}
 				\item Logique Métier
 				\item Scheduling
 				\item Buffering
-				\item QoS
 			\end{itemize}
 		\end{block}
 		}
 		\uncover<3->{
+		\begin{block}{Host to Controller}
+			\begin{itemize}
+				\item Host to Controller Interface
+				\item Sychronous Connection-Oriented
+				\item Asychronous Connection-Less
+			\end{itemize}
+		\end{block}
+	}
+		\uncover<4->{
 		\begin{block}{Controller}
 			\begin{itemize}
 				\item Connexion
 				\item Découverte
-				\item Sécurité
-				\item QoS
 			\end{itemize}
 		\end{block}
 		}
+	}
 	\end{minipage}
 \end{frame}
 

@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="375"
-     inkscape:cy="520"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="262.94016"
+     inkscape:cy="468.44439"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1056"
+     inkscape:window-height="1031"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="25"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata3667">
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -102,30 +102,12 @@
        x="175.29599"
        y="545.8725" />
     <rect
-       style="fill:#ac9393"
-       id="rect3344-1"
-       width="240.71428"
-       height="60"
-       x="216.78568"
-       y="514.50507" />
-    <rect
        style="fill:#e3dbdb"
        id="rect3352-3"
        width="260"
        height="50"
        x="206.78568"
        y="624.50507" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="292.50003"
-       y="557.36212"
-       id="text3354-1"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3356-6"
-         x="292.50003"
-         y="557.36212">HCI</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:36.10676193px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -223,5 +205,32 @@
          id="tspan3625"
          x="274.5853"
          y="444.34631">GATT</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="fill:#afc6e9;fill-opacity:1;stroke:#000000;stroke-width:1.00031066;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.39195981"
+       id="path3436"
+       sodipodi:sides="6"
+       sodipodi:cx="179.28571"
+       sodipodi:cy="561.64795"
+       sodipodi:r1="28.175833"
+       sodipodi:r2="24.400988"
+       sodipodi:arg1="0.53172407"
+       sodipodi:arg2="1.0553228"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 203.57142,575.93366 -24.51465,13.88919 -24.28571,-14.28571 0.22893,-28.17491 24.51465,-13.88918 24.28571,14.28571 z"
+       transform="matrix(3.3763279,0,0,1.3219627,-273.99728,-198.22217)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="294.84015"
+       y="556.26831"
+       id="text3354"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3356"
+         x="294.84015"
+         y="556.26831">HCI</tspan></text>
   </g>
 </svg>
