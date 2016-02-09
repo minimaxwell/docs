@@ -1,2 +1,57 @@
-oFono : https://padovan.org/blog/2010/02/handsfree-profile-into-bluez-and-ofono/
+Crédits photographiques :
+
+Fichier : nex_5.png
+Photo of the Nexus 5, taken from https://developer.android.com/distribute/promote/device-art.html, which is released under CC 2.5 Attribution. Portions of this page are reproduced from work created and shared by the Android Open Source Project and used according to terms described in the Creative Commons 2.5 Attribution License.
+
+Fichier headset.jpg/png
+https://commons.wikimedia.org/wiki/File:Bluetooth_headset.jpg
+This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. 	
+
+Fichier pt.jpg
+https://en.wikipedia.org/wiki/Pebble_Time#/media/File:Pebble_Time_front.jpg
+CC BY-SA
+
+Fichier gatt.png
+ Getting Started with Bluetooth Low Energy
+ Tools and Techniques for Low-Power Networking
+ By Kevin Townsend, Carles Cufí, Akiba, Robert Davidson
+ Publisher: O'Reilly Media
+
+Autres images :
+CC BY-SA, créées pour le meetup
+
+Crédits bibliographiques :
+
+Projet BlueZ
+http://www.bluez.org/
+http://www.bluez.org/the-management-interface/
+http://git.kernel.org/cgit/bluetooth/bluez.git
+http://git.kernel.org/cgit/linux/kernel/git/bluetooth/bluetooth-next.git
+http://news.gmane.org/gmane.linux.bluez.kernel
+
+Bluetooth SIG
+https://www.bluetooth.com/
+
+Attributs GATT
+https://www.bluetooth.com/specifications/assigned-numbers/generic-attribute-profile
+
+SensorTag
+http://processors.wiki.ti.com/index.php/SensorTag_User_Guide
+
+oFono : 
+https://padovan.org/blog/2010/02/handsfree-profile-into-bluez-and-ofono/
 https://bugs.freedesktop.org/show_bug.cgi?id=73325
+https://01.org/ofono
+
+Connman
+https://01.org/connman
+https://wiki.archlinux.org/index.php/Connman
+
+Divers
+https://en.wikipedia.org/wiki/List_of_Bluetooth_protocols
+https://developer.bluetooth.org/TechnologyOverview/Pages/L2CAP.aspx
+https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles
+http://beantalk.punchthrough.com/t/bluez-gatttool/416
+http://www.jaredwolff.com/blog/get-started-with-bluetooth-low-energy/
+http://blog.fraggod.net/2015/03/28/bluetooth-pan-network-setup-with-bluez-5x.html
+

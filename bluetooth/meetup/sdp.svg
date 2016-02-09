@@ -26,15 +26,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="202.7299"
-     inkscape:cy="714.58632"
+     inkscape:cx="321.65708"
+     inkscape:cy="656.01489"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1855"
-     inkscape:window-height="1056"
-     inkscape:window-x="1985"
-     inkscape:window-y="24"
+     inkscape:window-width="750"
+     inkscape:window-height="416"
+     inkscape:window-x="264"
+     inkscape:window-y="226"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -139,7 +139,7 @@
          x="252.40353"
          y="431.17096">Clavier</tspan></text>
     <rect
-       style="fill:#ac9d93;stroke:none;stroke-width:2.09504986;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
+       style="fill:#e3dedb;stroke:none;stroke-width:2.09504986;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
        id="rect9014"
        width="104.19067"
        height="71.333519"
@@ -162,28 +162,28 @@
          y="381.95865"
          id="tspan9020">SDP</tspan></text>
     <rect
-       style="fill:#ac9d93;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
+       style="fill:#e3dedb;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
        id="rect9022"
        width="90"
        height="70.714287"
        x="270.71429"
        y="141.64792" />
     <rect
-       style="fill:#ac9d93;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
+       style="fill:#e3dedb;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
        id="rect9024"
        width="90"
        height="70"
        x="270"
        y="282.36221" />
     <rect
-       style="fill:#ac9d93;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
+       style="fill:#e3dedb;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
        id="rect9026"
        width="90"
        height="60"
        x="270"
        y="422.36221" />
     <rect
-       style="fill:#ac9d93;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
+       style="fill:#e3dedb;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
        id="rect9030"
        width="99.285713"
        height="40"
@@ -204,7 +204,7 @@
          x="369.29568"
          y="146.77834">HSP</tspan></text>
     <rect
-       style="fill:#ac9d93;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
+       style="fill:#e3dedb;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
        id="rect9030-9"
        width="99.285713"
        height="40"
@@ -225,7 +225,7 @@
          x="368.60983"
          y="200.33972">HFP</tspan></text>
     <rect
-       style="fill:#ac9d93;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
+       style="fill:#e3dedb;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
        id="rect9030-9-0"
        width="99.285713"
        height="40"
@@ -305,7 +305,7 @@
          y="491.57812"
          id="tspan9106-8">SDP</tspan></text>
     <rect
-       style="fill:#ac9d93;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
+       style="fill:#e3dedb;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
        id="rect9030-9-0-7"
        width="99.285713"
        height="40"
@@ -374,7 +374,7 @@
          x="370.12024"
          y="473.81226">uuid : 0x1124</tspan></text>
     <rect
-       style="fill:#ac9d93;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981"
+       style="fill:#e3dedb;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5533981;fill-opacity:1"
        id="rect9202"
        width="102.85714"
        height="32.142834"
