@@ -22,6 +22,6 @@ clean :
 	rm -f *.toc
 	rm -f *.vrb
 
-mr_proper : 
+mr_proper : clean
 	rm -f *.pdf
 	rm -f $(IMG_SVG)
