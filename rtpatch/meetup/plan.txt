@@ -1,0 +1,29 @@
+intro orals : 
+ - on ne rentre pas dans les détails du patch
+ - on ne fait pas une analyse poussée en terme de perfs
+ - on ne fait pas un benchmark du patch
+ - présentation à haut niveau
+1 - présentation du patch RT
+	- historique
+	- objectif
+	- status actuel
+2 - présentation du cas d'utilisation
+	- besoins RT
+		- CAN
+	- besoins non-RT
+		- Wifi
+		- Bluetooth
+		- Modem
+		- LXC
+		- Java
+		- etc.
+3 - impacts constatés sur les indicateurs de performance
+	- htop
+		- load-average
+		- charge cpu
+		- nb threads/process
+	- vmstat
+		- context switching
+	- iostat
+		- IO/s
+4 - impacts sur le use-case

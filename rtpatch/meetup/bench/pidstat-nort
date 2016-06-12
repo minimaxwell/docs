@@ -1,0 +1,43 @@
+pi@raspberrypi:~ $ pidstat -w 10 1
+Linux 4.4.11-v7+ (raspberrypi)  12/06/16        _armv7l_        (4 CPU)
+
+20:21:27      UID       PID   cswch/s nvcswch/s  Command
+20:21:37        0         6      5.48      0.10  kworker/u8:0
+20:21:37        0         7      0.90      0.00  rcu_sched
+20:21:37        0        11      1.00      0.00  ksoftirqd/1
+20:21:37        0        19      1.29      0.00  ksoftirqd/3
+20:21:37        0        30      8.27      0.00  kworker/0:1
+20:21:37        0        45      2.09      0.00  kworker/1:1
+20:21:37        0        75      0.80      0.00  kworker/2:1
+20:21:37        0        78      1.69      0.00  irq/92-mmc1
+20:21:37        0        82      0.10      0.00  kworker/u8:2
+20:21:37        0        84      2.79      0.00  mmcqd/0
+20:21:37        0        87      0.20      0.00  jbd2/mmcblk0p2-
+20:21:37        0       213      1.49      0.00  brcmf_wdog/mmc1
+20:21:37        0       220      2.99      0.00  kworker/3:2
+20:21:37        0       388      0.10      0.00  wpa_supplicant
+20:21:37      105       417      0.30      0.00  avahi-daemon
+20:21:37    65534       435      0.20      0.00  thd
+20:21:37      106       705      1.00      0.00  ntpd
+20:21:37     1000       736      0.10      0.00  pidstat
+
+Average:      UID       PID   cswch/s nvcswch/s  Command
+Average:        0         6      5.48      0.10  kworker/u8:0
+Average:        0         7      0.90      0.00  rcu_sched
+Average:        0        11      1.00      0.00  ksoftirqd/1
+Average:        0        19      1.29      0.00  ksoftirqd/3
+Average:        0        30      8.27      0.00  kworker/0:1
+Average:        0        45      2.09      0.00  kworker/1:1
+Average:        0        75      0.80      0.00  kworker/2:1
+Average:        0        78      1.69      0.00  irq/92-mmc1
+Average:        0        82      0.10      0.00  kworker/u8:2
+Average:        0        84      2.79      0.00  mmcqd/0
+Average:        0        87      0.20      0.00  jbd2/mmcblk0p2-
+Average:        0       213      1.49      0.00  brcmf_wdog/mmc1
+Average:        0       220      2.99      0.00  kworker/3:2
+Average:        0       388      0.10      0.00  wpa_supplicant
+Average:      105       417      0.30      0.00  avahi-daemon
+Average:    65534       435      0.20      0.00  thd
+Average:      106       705      1.00      0.00  ntpd
+Average:     1000       736      0.10      0.00  pidstat
+

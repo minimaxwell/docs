@@ -1,0 +1,20 @@
+\section{PREEMPT-RT}
+\begin{frame}
+Rendre linux "temps-réel" : déterministe
+\begin{block}{Historique}
+\begin{itemize}
+	\item Patch PREEMPT-RT : Ingo Molnar
+	\item High-resolution timer : Thomas Gleixner
+\end{itemize}
+\end{block}
+\begin{block}{Kernel préemptible}
+\begin{itemize}
+	\item Ne plus désactiver les IRQ
+	\item Eliminer les sections critiques % non préemptibles
+	\item IRQ dans des threads
+\end{itemize}
+\end{block}
+%rendre linux temps-réel
+
+\end{frame}
+

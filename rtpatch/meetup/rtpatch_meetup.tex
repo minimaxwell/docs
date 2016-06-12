@@ -1,0 +1,47 @@
+\documentclass{beamer}
+\usepackage[export]{adjustbox}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{fancyvrb}
+\usetheme{Warsaw}
+
+\title[PREEMPT-RT]{Patch PREEMPT-RT : Impacts sur un cas d'utilisation}
+\author{maxime.chevallier@openwide.fr}
+\date{09 février 2016}
+\institute{Open Wide Ingénierie \\ Actia}
+\begin{document}
+
+% Afficher plan à chaque section
+\AtBeginSection[]{
+	\begin{frame}
+		\tableofcontents[currentsection, hideothersubsections]
+	\end{frame}
+}
+\beamertemplatenavigationsymbolsempty{} % /o\ Pas de symboles de nav
+
+% Numeros de slides
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+\setbeamercolor{footline}{fg=blue}
+\setbeamerfont{footline}{series=\bfseries}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\setbeamerfont{caption}{size=\tiny}
+    \begin{frame}
+
+	\titlepage
+
+    \end{frame}
+
+\input{01_Intro}
+\input{02_RT_PATCH}
+\input{03_usecase}
+\input{04_impacts_perf}
+\input{05_impacts_reels}
+
+\end{document}
