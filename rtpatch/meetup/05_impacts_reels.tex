@@ -1,13 +1,16 @@
 \section{Impacts : performances mesurées}
-\subsection{Application java}
 \begin{frame}
-
+	\begin{block}{Application métier}
+		Environ 20\% d'écart constaté
+	\end{block}
+	\begin{block}{CAN : 80\% de charge, 4 bus}
+		\begin{itemize}
+			\item Aucune perte avec PREEMPT\_RT
+			\item Pertes sans le patch
+		\end{itemize}
+	\end{block}
 \end{frame}
 
-\subsection{CAN}
-
-\begin{frame}
-\end{frame}
 
 \subsection{Stabilité}
 \begin{frame}

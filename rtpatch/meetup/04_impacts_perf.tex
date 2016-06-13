@@ -1,16 +1,76 @@
 \section{Impacts : indicateurs de performance}
+\subection{load average}
 \begin{frame}
 	\begin{block}{load average}
+man uptime : "System  load  averages  is the average number of processes that are either in a runnable or uninterruptable state".
+
+Outils : uptime, htop, /proc/loadavg
 	\end{block}
-	\begin{block}{charge CPU}
-	\end{block}
-\begin{block}{Process / Threads}
-	\end{block}
+	\begin{minipage}[t]{0.48\linewidth}
+		\begin{block}{Sans PREEMPT\_RT}
+			\begin{itemize}
+				\item 155 taches
+				\item load average : 1.82
+			\end{itemize}
+		\end{block}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\linewidth}
+		\begin{block}{Avec PREEMPT\_RT}
+			\begin{itemize}
+				\item XX process
+				\item load average : 
+			\end{itemize}
+		\end{block}
+	\end{minipage}
 \end{frame}
 
 \begin{frame}
-	\begin{block}{context switch}
+		\begin{block}{load average}
+man uptime : "System  load  averages  is the average number of processes that are either in a runnable or uninterruptable state".
+
+Outils : uptime, htop, /proc/loadavg
 	\end{block}
+	\begin{minipage}[t]{0.48\linewidth}
+		\begin{block}{Sans PREEMPT\_RT : rpi3}
+			\begin{itemize}
+				\item 155 taches
+				\item load average : 1.82
+			\end{itemize}
+		\end{block}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\linewidth}
+		\begin{block}{Avec PREEMPT\_RT : rpi3}
+			\begin{itemize}
+				\item XX process
+				\item load average : 
+			\end{itemize}
+		\end{block}
+	\end{minipage}
+
+\end{frame}
+\subsection{context switching}
+\begin{frame}
+	\begin{block}{context switch}
+
+Outils : vmstat, pidstat
+	\end{block}
+	\begin{minipage}[t]{0.48\linewidth}
+		\begin{block}{Sans PREEMPT\_RT}
+			\begin{itemize}
+				\item XX process
+				\item load average : 
+			\end{itemize}
+		\end{block}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\linewidth}
+		\begin{block}{Avec PREEMPT\_RT}
+			\begin{itemize}
+				\item XX process
+				\item load average : 
+			\end{itemize}
+		\end{block}
+	\end{minipage}
+
 \end{frame}
 
 \begin{frame}
