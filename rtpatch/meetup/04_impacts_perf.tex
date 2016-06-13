@@ -1,79 +1,121 @@
-\section{Impacts : indicateurs de performance}
-\subection{load average}
+\section{Impacts}
+%demo avec htop
+\subsection{load average}
 \begin{frame}
-	\begin{block}{load average}
-man uptime : "System  load  averages  is the average number of processes that are either in a runnable or uninterruptable state".
+\center{\huge{load average}}
+	\begin{block}{Définition}
+Nombre de process 'Runnable' ou 'Uninterruptible'
 
-Outils : uptime, htop, /proc/loadavg
+Définition complète : \textbf{man uptime}
 	\end{block}
-	\begin{minipage}[t]{0.48\linewidth}
-		\begin{block}{Sans PREEMPT\_RT}
-			\begin{itemize}
-				\item 155 taches
-				\item load average : 1.82
-			\end{itemize}
-		\end{block}
-	\end{minipage}
-	\begin{minipage}[t]{0.48\linewidth}
-		\begin{block}{Avec PREEMPT\_RT}
-			\begin{itemize}
-				\item XX process
-				\item load average : 
-			\end{itemize}
-		\end{block}
-	\end{minipage}
+	\begin{block}{Outils}
+		\begin{itemize}
+			\item /proc/loadavg
+			\item htop, top
+			\item uptime, w
+		\end{itemize}
+	\end{block}
 \end{frame}
-
 \begin{frame}
-		\begin{block}{load average}
-man uptime : "System  load  averages  is the average number of processes that are either in a runnable or uninterruptable state".
+\center{\huge{load average}}
+	\begin{block}{Sans PREEMPT\_RT}
+\textbf{cat /proc/loadavg}
 
-Outils : uptime, htop, /proc/loadavg
+2.06 2.09 1.87 3/144 1064
 	\end{block}
-	\begin{minipage}[t]{0.48\linewidth}
-		\begin{block}{Sans PREEMPT\_RT : rpi3}
-			\begin{itemize}
-				\item 155 taches
-				\item load average : 1.82
-			\end{itemize}
-		\end{block}
-	\end{minipage}
-	\begin{minipage}[t]{0.48\linewidth}
-		\begin{block}{Avec PREEMPT\_RT : rpi3}
-			\begin{itemize}
-				\item XX process
-				\item load average : 
-			\end{itemize}
-		\end{block}
-	\end{minipage}
+	\begin{block}{Avec PREEMPT\_RT}
+\textbf{cat /proc/loadavg}
 
+2.45 2.62 1.96 4/176 1335
+	\end{block}
+\end{frame}
+\begin{frame}
+%screencap HTOP busy no RT
+\end{frame}
+\begin{frame}
+%screencap HTOP busy RT
 \end{frame}
 \subsection{context switching}
 \begin{frame}
-	\begin{block}{context switch}
-
-Outils : vmstat, pidstat
+\center{\huge{context switching}}
+	\begin{block}{Définition}
+		\begin{itemize}
+			\item Changement d'espace d'adressage
+			\item Mise à jour des registres
+			\item Lié au scheduling
+		\end{itemize}
 	\end{block}
-	\begin{minipage}[t]{0.48\linewidth}
-		\begin{block}{Sans PREEMPT\_RT}
-			\begin{itemize}
-				\item XX process
-				\item load average : 
-			\end{itemize}
-		\end{block}
-	\end{minipage}
-	\begin{minipage}[t]{0.48\linewidth}
-		\begin{block}{Avec PREEMPT\_RT}
-			\begin{itemize}
-				\item XX process
-				\item load average : 
-			\end{itemize}
-		\end{block}
-	\end{minipage}
-
+	\begin{block}{outils}
+		\begin{itemize}
+			\item vmstat
+			\item pidstat
+		\end{itemize}
+	\end{block}
+\end{frame}
+%demo
+\begin{frame}[containsverbatim]
+\center{\huge{vmstat}}
+	\begin{block}{Sans PREEMPT\_RT}
+\begin{verbatim}
+ r  b [...]    in   cs us sy id wa
+ 3  0 [...]  2011  476 24 33 43  0
+ 2  0 [...]  8685 1790 26 36 38  0
+ 2  0 [...]  8776 1846 26 36 38  0
+ 2  0 [...]  8705 1790 26 35 39  0
+\end{verbatim}
+	\end{block}
+	\begin{block}{Avec PREEMPT\_RT}
+\begin{verbatim}
+ r  b [...]    in    cs us sy id wa
+ 3  0 [...] 2535   2597 22 34 45  0
+ 2  0 [...] 11459 10771 22 38 41  0
+ 3  0 [...] 11444 10901 23 38 40  0
+ 3  0 [...] 11456 10838 21 37 42  0
+\end{verbatim}
+	\end{block}
 \end{frame}
 
+
+\begin{frame}[containsverbatim]
+\center{pidstat : Sans PREEMPT\_RT}
+\begin{verbatim}
+ cswch/s nvcswch/s  Command
+    0.15      0.02  systemd
+   76.08      0.00  ksoftirqd/0
+    0.01      0.00  ksoftirqd/1
+  111.42      0.88  kworker/0:1
+    1.10      0.02  kworker/2:2
+  119.36      0.38  rngd
+   14.30      0.08  kworker/1:2
+    1.81      0.40  dbus-daemon
+    0.50      0.01  watchdog
+    0.03      0.00  ofonod
+    0.00    214.69  stress
+    0.00    102.13  stress
+    0.22     15.46  pidstat
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[containsverbatim]
+\center{pidstat : Avec PREEMPT\_RT}
+\begin{verbatim}
+ cswch/s nvcswch/s  Command
+    0.14      0.22  systemd
+  100.96      0.00  ksoftirqd/0
+  100.93      8.85  ksoftirqd/1
+  110.24      3.82  ksoftirqd/2
+  100.00      0.94  ksoftirqd/3
+   36.40      5.05  kworker/0:1
+   41.04      2.67  kworker/1:1
+ 4210.75     18.70  irq/150-2188000
+  118.84      0.37  rngd
+    0.02      0.00  ofonod
+    0.00   1588.59  stress
+    0.03    369.85  stress
+    0.17      4.78  pidstat
+\end{verbatim}
+\end{frame}
+\center{\huge{Questions ?}}
 \begin{frame}
 
 \end{frame}
-

@@ -2,16 +2,42 @@
 \subsection{Produit}
 %logo actia
 \begin{frame}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=2.5cm]{img/logo-actia.png}
+			\caption{Actia automotive}
+		\end{figure}
+	\end{center}
+
+
 	\begin{block}{Besoins RT}
 		\begin{itemize}
-			\item Bus CAN over SPI
+			\item 4 x Bus CAN
+			\item Faible latence
+			\item Déterminisme
 		\end{itemize}
 	\end{block}
 	\begin{block}{Autres besoins}
 		\begin{itemize}
-			\item Wifi, Bluetooth, Ethernet
-			\item eMMC
+			\item Wifi, Bluetooth, Ethernet, eMMC, etc.
 			\item Forte charge CPU
+			\item BSP : Adaptabilité
+		\end{itemize}
+	\end{block}
+\end{frame}
+\subsection{Use case}
+\begin{frame}
+	\begin{block}{Conditions}
+		\begin{itemize}
+			\item iMX6 Quad core
+			\item linux 3.10.17
+		\end{itemize}
+	\end{block}
+	\begin{block}{Benchmark}
+		\begin{itemize}
+		\item CPU : \textbf{stress -c 1}
+		\item Mem : \textbf{stress -c 1 -m 1}
+		\item Extérieur : \textbf{ping -f}
 		\end{itemize}
 	\end{block}
 \end{frame}

@@ -1,6 +1,6 @@
 \section{PREEMPT-RT}
 \begin{frame}
-Rendre linux "temps-réel" : déterministe
+\center{\huge{Déterminisme}}
 \begin{block}{Historique}
 \begin{itemize}
 	\item Patch PREEMPT-RT : Ingo Molnar, 2006
@@ -9,10 +9,9 @@ Rendre linux "temps-réel" : déterministe
 \end{block}
 \begin{block}{Kernel préemptible}
 \begin{itemize}
+	\item IRQ dans des threads
 	\item Ne plus désactiver les IRQ
 	\item Eliminer les sections critiques % non préemptibles
-	\item IRQ dans des threads
-	\item Inversion de priorité
 \end{itemize}
 \end{block}
 %rendre linux temps-réel
