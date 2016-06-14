@@ -1,19 +1,23 @@
-\section{PREEMPT-RT}
+\section{PREEMPT\_RT}
 \begin{frame}
-\center{\huge{Déterminisme}}
-\begin{block}{Historique}
-\begin{itemize}
-	\item Patch PREEMPT-RT : Ingo Molnar, 2006
-	\item High-resolution timer : Thomas Gleixner
-\end{itemize}
-\end{block}
-\begin{block}{Kernel préemptible}
-\begin{itemize}
-	\item IRQ dans des threads
-	\item Ne plus désactiver les IRQ
-	\item Eliminer les sections critiques % non préemptibles
-\end{itemize}
-\end{block}
+	\center{\huge{Déterminisme}}
+	\begin{block}{Historique}
+		\begin{itemize}
+			\item Patch PREEMPT\_RT : Ingo Molnar, 2006
+			\item High-resolution timer : Thomas Gleixner
+		\end{itemize}
+	\end{block}
+
+	\uncover<2->{
+		\begin{block}{Kernel préemptible}
+			\begin{itemize}
+				\item IRQ dans des threads
+				\item Ne plus désactiver les IRQ
+				\item Eliminer les sections critiques % non préemptibles
+			\end{itemize}
+		\end{block}
+	\small{https://rt.wiki.kernel.org/index.php/Main\_Page}
+	}
 %rendre linux temps-réel
 
 \end{frame}

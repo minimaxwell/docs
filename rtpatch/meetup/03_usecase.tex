@@ -8,8 +8,8 @@
 			\caption{Actia automotive}
 		\end{figure}
 	\end{center}
-
-
+	
+	\uncover<2->{
 	\begin{block}{Besoins RT}
 		\begin{itemize}
 			\item 4 x Bus CAN
@@ -17,6 +17,8 @@
 			\item Déterminisme
 		\end{itemize}
 	\end{block}
+	}
+	\uncover<3->{
 	\begin{block}{Autres besoins}
 		\begin{itemize}
 			\item Wifi, Bluetooth, Ethernet, eMMC, etc.
@@ -24,6 +26,7 @@
 			\item BSP : Adaptabilité
 		\end{itemize}
 	\end{block}
+	}
 \end{frame}
 \subsection{Use case}
 \begin{frame}
@@ -33,6 +36,7 @@
 			\item linux 3.10.17
 		\end{itemize}
 	\end{block}
+	\uncover<2->{
 	\begin{block}{Benchmark}
 		\begin{itemize}
 		\item CPU : \textbf{stress -c 1}
@@ -40,5 +44,6 @@
 		\item Extérieur : \textbf{ping -f}
 		\end{itemize}
 	\end{block}
+	}
 \end{frame}
 

@@ -8,6 +8,7 @@ Nombre de process 'Runnable' ou 'Uninterruptible'
 
 Définition complète : \textbf{man uptime}
 	\end{block}
+	\uncover<2->{
 	\begin{block}{Outils}
 		\begin{itemize}
 			\item /proc/loadavg
@@ -15,26 +16,40 @@ Définition complète : \textbf{man uptime}
 			\item uptime, w
 		\end{itemize}
 	\end{block}
+	}
 \end{frame}
-\begin{frame}
+\begin{frame}[containsverbatim]
 \center{\huge{load average}}
 	\begin{block}{Sans PREEMPT\_RT}
-\textbf{cat /proc/loadavg}
-
+\textbf{cat /proc/loadavg : }
 2.06 2.09 1.87 3/144 1064
+
+\textbf{top : \%id }91.4 \textbf{\%si }7.7
+	\end{block}
+	\vspace{3.9cm}
+\end{frame}
+
+\begin{frame}[containsverbatim]
+\center{\huge{load average}}
+	\begin{block}{Sans PREEMPT\_RT}
+\textbf{cat /proc/loadavg : }
+2.06 2.09 1.87 3/144 1064
+
+\textbf{top : \%id }91.4 \textbf{\%si }7.7
 	\end{block}
 	\begin{block}{Avec PREEMPT\_RT}
-\textbf{cat /proc/loadavg}
-
+\textbf{cat /proc/loadavg : }
 2.45 2.62 1.96 4/176 1335
+
+\textbf{top : \%id }89.0 \textbf{\%si }8.7
+
+	\begin{verbatim}
+PID USER S %CPU %MEM    TIME+  COMMAND 
+121 root R   40  0.0   5:00.10 irq/150-2188000
+	\end{verbatim}
 	\end{block}
 \end{frame}
-\begin{frame}
-%screencap HTOP busy no RT
-\end{frame}
-\begin{frame}
-%screencap HTOP busy RT
-\end{frame}
+
 \subsection{context switching}
 \begin{frame}
 \center{\huge{context switching}}
@@ -45,12 +60,14 @@ Définition complète : \textbf{man uptime}
 			\item Lié au scheduling
 		\end{itemize}
 	\end{block}
+	\uncover<2->{
 	\begin{block}{outils}
 		\begin{itemize}
 			\item vmstat
 			\item pidstat
 		\end{itemize}
 	\end{block}
+	}
 \end{frame}
 %demo
 \begin{frame}[containsverbatim]
@@ -58,16 +75,34 @@ Définition complète : \textbf{man uptime}
 	\begin{block}{Sans PREEMPT\_RT}
 \begin{verbatim}
  r  b [...]    in   cs us sy id wa
- 3  0 [...]  2011  476 24 33 43  0
+ 0  0 [...]  1025 1243  0  0 100  0
+ 0  0 [...]  1023 1242  0  1 100  0
+ 0  0 [...]  1030 1255  0  0 100  0
+\end{verbatim}
+	\end{block}
+	\begin{block}{Sans PREEMPT\_RT, ping}
+\begin{verbatim}
+ r  b [...]    in   cs us sy id wa
  2  0 [...]  8685 1790 26 36 38  0
  2  0 [...]  8776 1846 26 36 38  0
  2  0 [...]  8705 1790 26 35 39  0
 \end{verbatim}
 	\end{block}
+\end{frame}
+
+\begin{frame}[containsverbatim]
+\center{\huge{vmstat}}
 	\begin{block}{Avec PREEMPT\_RT}
 \begin{verbatim}
+ r  b [...]   in    cs us sy id wa
+ 2  0 [...]  1103 2168 25 25 49  0
+ 2  0 [...]  1092 2162 26 25 49  0
+ 3  0 [...]  1103 2170 26 25 49  0
+\end{verbatim}
+	\end{block}
+	\begin{block}{Avec PREEMPT\_RT, ping}
+\begin{verbatim}
  r  b [...]    in    cs us sy id wa
- 3  0 [...] 2535   2597 22 34 45  0
  2  0 [...] 11459 10771 22 38 41  0
  3  0 [...] 11444 10901 23 38 40  0
  3  0 [...] 11456 10838 21 37 42  0
