@@ -1,0 +1,43 @@
+\documentclass{beamer}
+\usepackage[export]{adjustbox}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{fancyvrb}
+\usetheme{Warsaw}
+
+\title[Linux Embarqué]{Découverte de Linux Embarqué}
+\author{maxime.chevallier@smile.fr}
+\date{09 septembre 2016}
+\institute{Smile / Open Wide Ingénierie}
+\begin{document}
+
+% Afficher plan à chaque section
+\AtBeginSection[]{
+	\begin{frame}
+		\tableofcontents[currentsection, hideothersubsections]
+	\end{frame}
+}
+\beamertemplatenavigationsymbolsempty{} % /o\ Pas de symboles de nav
+
+% Numeros de slides
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+\setbeamercolor{footline}{fg=blue}
+\setbeamerfont{footline}{series=\bfseries}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\setbeamerfont{caption}{size=\tiny}
+    \begin{frame}
+
+	\titlepage
+
+    \end{frame}
+
+\input{01_Intro}
+
+\end{document}
