@@ -2,9 +2,32 @@
 % C'est quoi ?
 \subsection{Contraintes}
 % Contraintes
-\subsection{Microcontrolleur}
-% Microcontrolleur
-\subsection{Microcoprocesseur}
-% Microprocesseur
-\subsection{System on a Chip}
-% SoC
+\subsection{Archi logicielle}
+
+\begin{frame}
+
+	\begin{block}{bootloader}
+		\begin{itemize}
+			\item Initialise le matériel
+			\item Charge le noyau
+		\end{itemize}
+	\end{block}
+
+	\begin{block}{noyau}
+		\begin{itemize}
+			\item Gère les périphériques
+			\item Gère les ressources ( RAM, CPU )
+			\item Socle pour les applications
+		\end{itemize}
+	\end{block}
+
+	\begin{block}{espace utilisateur}
+		On y trouve :
+		\begin{itemize}
+			\item Les librairies
+			\item Les exécutables
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+

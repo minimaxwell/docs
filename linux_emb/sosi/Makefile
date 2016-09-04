@@ -21,6 +21,7 @@ clean :
 	rm -f *.snm
 	rm -f *.toc
 	rm -f *.vrb
+	rm -f *.pdf
 
 mr_proper : clean
 	rm -f *.pdf
