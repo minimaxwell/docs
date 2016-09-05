@@ -1,16 +1,18 @@
 \section{Bootloader}
 %role
-\begin{frame}
+\begin{frame}[t]
 	%schema boot + kernel
-	\begin{minipage}[t]{0.45\linewidth}
+	\begin{columns}[t, totalwidth=\textwidth]
+		\begin{column}[t]{0.40\linewidth}
 		\begin{figure}
-			\includegraphics[height=5cm]{img/boot_bl_kern.png}
+			\includegraphics<1-5>[width=4cm]{img/boot_bl.png}
+			\includegraphics<6>[width=4cm]{img/boot_bl_kern.png}
+			\includegraphics<7->[width=4cm]{img/boot.png}
 			\caption{boot sequence}
 		\end{figure}
 
-	\end{minipage}
-
-	\begin{minipage}[t]{0.45\linewidth}
+	\end{column}
+		\begin{column}[t]{0.45\linewidth}
 	\begin{block}{Boot Sequence}
 		\begin{itemize}
 			\item<1-> Power On
@@ -19,9 +21,11 @@
 			\item<4-> Init matériel
 			\item<5-> Noyau chargé
 			\item<6-> Noyau exécuté
+			\item<7-> /sbin/init appelé
 		\end{itemize}
 	\end{block}
-	\end{minipage}
+	\end{column}
+	\end{columns}
 \end{frame}
 %U Boot
 \begin{frame}
