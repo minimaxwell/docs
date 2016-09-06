@@ -23,7 +23,7 @@
 	\begin{column}[t]{0.30\linewidth}
 		\begin{figure}
 			\includegraphics<2->[height=2.5cm]{img/roomba.jpg}
-			\uncover<2->{\caption{aspi du futur}}
+			\uncover<2->{\caption{aspirateur du futur}}
 		\end{figure}
 	\end{column}
 	\begin{column}[t]{0.30\linewidth}
@@ -43,20 +43,21 @@
 \end{frame}
 % C'est quoi ?
 \subsection{Contraintes}
-\begin{frame}
-	\begin{block}<1->{Coût}
+\begin{frame}[t]
+	\center{\huge{Contraintes}}
+	\begin{block}<1->{Coûts matériels}
 		\begin{itemize}
 			\item Processeur
-			\item Mémoire
+			\item Mémoire(s)
 			\item Périphériques
 		\end{itemize}
 	\end{block}
-	\begin{block}<2->{Environnement}
+	\begin{block}<2->{Coûts logiciels}
 		\begin{itemize}
-			\item Durabilité
-			\item Environnement physique hostile
-			\item Consommation
-			\item Normes ( Radio, GPS )
+			\item Licenses ?
+			\item Développements spécifiques ?
+			\item Expertise ou support externe ?
+			\item Evolution du produit ?
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -101,7 +102,8 @@
 	\end{block}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[t]
+	\center{\huge{Contraintes}}
 	\begin{block}{Performances}
 		\begin{itemize}
 			\item Latences : Temps réel
@@ -109,34 +111,48 @@
 			\item Capacité de calcul
 		\end{itemize}
 	\end{block}
+	\begin{block}<2->{Environnement}
+		\begin{itemize}
+			\item Durabilité
+			\item Environnement physique hostile
+			\item Consommation
+			\item Normes ( Radio, GPS )
+		\end{itemize}
+	\end{block}
 \end{frame}
-% Contraintes
-\subsection{Archi logicielle}
 
 \begin{frame}
-
-	\begin{block}{bootloader}
+	\center{\huge{OS Temps-réel libres}}
+	\begin{block}<2->{Contiki}
+		\begin{columns}
+		\begin{column}{0.50\textwidth}
 		\begin{itemize}
-			\item Initialise le matériel
-			\item Charge le noyau
+			\item Orienté Networking et IoT
+			\item Petite emprunte mémoire
+			\item Riche en fonctionnalités
 		\end{itemize}
+		\end{column}
+		\begin{column}{0.30\textwidth}
+			\includegraphics[height=2cm]{img/amp.jpg}
+		\end{column}
+		\end{columns}
 	\end{block}
-
-	\begin{block}{noyau}
-		\begin{itemize}
-			\item Gère les périphériques
-			\item Gère les ressources ( RAM, CPU )
-			\item Socle pour les applications
-		\end{itemize}
+	\begin{block}<3->{freeRTOS}
+		\begin{columns}
+			\begin{column}{0.50\textwidth}
+				\begin{itemize}
+					\item Très petit
+					\item Beaucoup d'architectures
+					\item Éprouvé dans l'industrie
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.20\textwidth}
+				\includegraphics[height=2cm]{img/pt.jpg}
+			\end{column}
+			\begin{column}{0.20\textwidth}
+				\includegraphics[height=2cm]{img/cubesat.jpg}
+			\end{column}
+		\end{columns}
 	\end{block}
-
-	\begin{block}{espace utilisateur}
-		On y trouve :
-		\begin{itemize}
-			\item Les librairies
-			\item Les exécutables
-		\end{itemize}
-	\end{block}
-
 \end{frame}
 

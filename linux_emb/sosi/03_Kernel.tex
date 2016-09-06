@@ -3,41 +3,51 @@
 \begin{frame}
 	\center{\huge{Noyau}}
 	\begin{columns}
-	\begin{column}{0.40\linewidth}
+	\begin{column}{0.38\linewidth}
 		\begin{figure}
-			\includegraphics[height=3cm]{img/arch_linux_full.png}
+			\includegraphics[height=2.5cm]{img/arch_linux_full.png}
 			 \caption{kernel}
 		\end{figure}
 	\end{column}
-	\begin{column}{0.45\linewidth}
+	\begin{column}{0.60\linewidth}
 		\begin{itemize}
-			\item Gère le matériel
-			\item Gère les ressources
-			\item Implémente certains protocoles
-			\item Couche d'abstraction
-			\item Isolé de l'espace utilisateur
-			\item Composant critique
+			\item<2-> Gère le matériel
+			\item<3-> Gère les ressources
+			\item<4-> Implémente certains protocoles
+			\item<5-> Couche d'abstraction
+			\item<6-> Isolé de l'espace utilisateur
+			\item<7-> Composant critique
 		\end{itemize}
 	\end{column}
 	\end{columns}
 \end{frame}
+
+
 \begin{frame}
 	\center{\huge{Linux}}
-	\begin{itemize}
-		\item Beaucoup d'architectures
-		\item Beaucoup de périphériques
-		\item Beaucoup de fonctionnalités
-		\item Communauté active
-		\item Entièrement configurable
-		\item Libre
-		\item Documenté
-		\item Polyvalent
-	\end{itemize}
-	\begin{block}{Variantes}
+	\begin{columns}[t]
+		\begin{column}{0.70\textwidth}
+			\begin{itemize}
+				\item<2-> Beaucoup d'architectures
+				\item<3-> Beaucoup de périphériques
+				\item<4-> Beaucoup de fonctionnalités
+				\item<5-> Communauté active
+				\item<6-> Entièrement configurable
+				\item<7-> Libre
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.25\textwidth}
+			\begin{figure}
+				\includegraphics[height=2cm]{img/tux.png}
+				\caption{Tux}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\begin{block}<8->{Variantes}
 		\begin{itemize}
-			\item Temps réeel : Preempt-RT, xenomai
-			\item Microcontrolleur : uCLinux
-			\item Sécurité : SELinux, grsecurity
+			\item<8-> Temps réel : Preempt-RT, xenomai
+			\item<9-> Microcontrolleur : uCLinux
+			\item<10-> Sécurité : SELinux, grsecurity
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -50,29 +60,41 @@
 		\item Support d'un protocole
 		\item Libre ou Propriétaire
 	\end{itemize}
-	\begin{block}{Kernel module}
+	\begin{block}<2->{Kernel module}
+		\begin{itemize}
 		\item Extension du kernel
 		\item Intégration statique ou dynamique
-		\item Lié à une version du kernel
+		\item \textbf{Lié à une version du kernel}
 		\item Gestion des dépendances
+		\end{itemize}
 	\end{block}
 \end{frame}
 % drivers, support
 \subsection{Configuration}
-\begin{frame}
+\begin{frame}[t]
+	\center{\huge{Configuration du noyau}}
+	\begin{columns}[T]
+		\begin{column}{0.50\textwidth}
 		\begin{itemize}
 			\item Choix des drivers
 			\item Choix des fonctionnalités
 			\item Options de debug
 			\item Options d'optimisation
 		\end{itemize}
-	\begin{block}{Kconfig}
+		\end{column}
+		\begin{column}{0.48\textwidth}
+			\vspace{-0.2cm}
+			\begin{figure}
+				\includegraphics<2->[height=3cm]{img/menuconfig.png}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\begin{block}<2->{Kconfig}
 		\begin{itemize}
 			\item Plusieurs UI
 			\item Dépendances entre options
 			\item Génère un fichier de conf
 		\end{itemize}
 	\end{block}
-
 \end{frame}
 % choix des options : selon matos, contraintes

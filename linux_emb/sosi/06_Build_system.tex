@@ -36,12 +36,13 @@
 		\item<1-> Configure, construit et package les composants
 		\item<2-> Gère les dépendances
 		\item<3-> Permet la reproductibilité
+		\item<4-> Génère la chaine de cross-compilation
 	\end{itemize}
-\begin{block}<4->{Choix critique}
+\begin{block}<5->{Choix critique}
 	\begin{itemize}
-		\item<5-> Conditionne le développement
-		\item<6-> Conditionne l'évolution du projet
-		\item<7-> Conditionne les livrables
+		\item<6-> Conditionne le développement
+		\item<7-> Conditionne l'évolution du projet
+		\item<8-> Conditionne les livrables
 	\end{itemize}
 \end{block}
 \end{frame}
@@ -49,22 +50,55 @@
 \subsection{Buildroot}
 \begin{frame}
 	\center{\huge{Buildroot}}
+	\begin{columns}
+		\begin{column}{0.65\textwidth}
+			\begin{itemize}
+				\item<1-> Makefiles, Kconfig
+				\item<2-> Rootfs, Bootloader, Kernel, Toolchain
+				\item<3-> Répandu et simple d'utilisation
+				\item<4-> 1 carte = 1 buildroot
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.30\textwidth}
+			\begin{figure}
+				 \includegraphics<1->[height=2cm]{img/buildroot.png}
+				 \uncover<1->{\caption{Logo buildroot}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\begin{block}<5->{Pourquoi Buildroot ?}
+		\begin{itemize}
+			\item<6-> Cartes sans variantes
+			\item<7-> Prototyage
+			\item<8-> Projet "Simple"
+		\end{itemize}
+	\end{block}
 \end{frame}
 % buildroot
 \subsection{Yocto}
 % yocto
 \begin{frame}
 	\center{\huge{Yocto project}}
-	\begin{block}{Principes}
 		\begin{itemize}
-			\item Groupes de composants réusilisables : Layers
-			\item Scripts surchargeables : Recipes
-			\item Grosse base de composants
+			\item<2-> Groupes de composants réutilisables : Layers
+			\item<3-> Scripts surchargeables : Recipes
+			\item<4-> Grosse base de composants
+			\item<5-> Rootfs, Kernel, Bootloader, Toolchain, Paquets
+			\item<6-> Difficile à prendre en main
 		\end{itemize}
-	\end{block}
+	\begin{block}<7->{Pourquoi Yocto ?}
 	\begin{itemize}
-		\item Gros projet
-		\item Cartes avec variantes
-		\item Difficile à prendre en main
+		\item<8-> Gros projet
+		\item<9-> Cartes avec variantes
+		\item<10-> Favoriser la réutilisation
 	\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\center{\huge{Yocto c'est simple}}
+	\begin{figure}
+		 \includegraphics<2->[height=5.1cm]{img/yocto.png}
+		 \uncover<2->{\caption{\tiny{http://www.yoctoproject.org/docs/2.1/mega-manual/mega-manual.html}}}
+	\end{figure}
 \end{frame}

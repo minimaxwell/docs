@@ -4,37 +4,55 @@
 	%schema boot + kernel
 	\begin{columns}[t, totalwidth=\textwidth]
 		\begin{column}[t]{0.40\linewidth}
-		\begin{figure}
-			\includegraphics<1-5>[width=4cm]{img/boot_bl.png}
-			\includegraphics<6>[width=4cm]{img/boot_bl_kern.png}
-			\includegraphics<7->[width=4cm]{img/boot.png}
-			\caption{boot sequence}
-		\end{figure}
-
-	\end{column}
+			\begin{figure}
+				\includegraphics<1-5>[width=4cm]{img/boot_bl.png}
+				\includegraphics<6>[width=4cm]{img/boot_bl_kern.png}
+				\includegraphics<7->[width=4cm]{img/boot.png}
+				\caption{boot sequence}
+			\end{figure}
+		\end{column}
 		\begin{column}[t]{0.45\linewidth}
-	\begin{block}{Boot Sequence}
-		\begin{itemize}
-			\item<1-> Power On
-			\item<2-> Bootloader chargé
-			\item<3-> Bootloader exécuté
-			\item<4-> Init matériel
-			\item<5-> Noyau chargé
-			\item<6-> Noyau exécuté
-			\item<7-> /sbin/init appelé
-		\end{itemize}
-	\end{block}
-	\end{column}
+			\begin{block}{Boot Sequence}
+				\begin{itemize}
+					\item<1-> Power On
+					\item<2-> Bootloader chargé
+					\item<3-> Bootloader exécuté
+					\item<4-> Init matériel
+					\item<5-> Noyau chargé
+					\item<6-> Noyau exécuté
+					\item<7-> /sbin/init appelé
+				\end{itemize}
+			\end{block}
+		\end{column}
 	\end{columns}
 \end{frame}
 %U Boot
 \begin{frame}
 	\center{\huge{Das U-Boot}}
-
-\end{frame}
-
-% Barebox
-\begin{frame}
-	\center{\huge{Barebox}}
+		\begin{columns}
+		\begin{column}{0.48\textwidth}
+		\begin{itemize}
+			\item<2-> Le plus utilisé
+			\item<3-> Performant
+			\item<4-> 15 architectures
+		\end{itemize}
+		\end{column}
+		\begin{column}{0.48\textwidth}
+		\begin{itemize}
+			\item<5-> Scriptable
+			\item<6-> Boot réseau
+			\item<7-> Shell intéractif
+		\end{itemize}
+		\end{column}
+		\end{columns}
+		\vspace{0.5cm}
+	\begin{block}<8->{Utilisation}
+		\begin{itemize}
+			\item Bootloader Stage 1 ou 2
+			\item Debug matériel
+			\item Mécanismes de recovery
+		\end{itemize}
+	\end{block}
+	\uncover<9->{Alternative : Barebox}
 \end{frame}
 
