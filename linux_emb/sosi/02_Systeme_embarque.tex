@@ -44,13 +44,64 @@
 % C'est quoi ?
 \subsection{Contraintes}
 \begin{frame}
-	\begin{block}{Coût}
+	\begin{block}<1->{Coût}
 		\begin{itemize}
 			\item Processeur
 			\item Mémoire
 			\item Périphériques
 		\end{itemize}
 	\end{block}
+	\begin{block}<2->{Environnement}
+		\begin{itemize}
+			\item Durabilité
+			\item Environnement physique hostile
+			\item Consommation
+			\item Normes ( Radio, GPS )
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}[t]
+	\begin{block}<1->{Microcontrolleur}
+		\begin{columns}[t]
+			\begin{column}[T]{0.25\textwidth}
+				\begin{figure}
+					\includegraphics<1->[width=2.2cm]{img/atmega.jpg}
+					\uncover<1->{\caption{Atmel ATMega 328}}
+				\end{figure}
+			\end{column}
+			\begin{column}{0.70\textwidth}
+				\begin{itemize}
+					\item<2-> 1\euro50 / pièce
+					\item<2-> 1 Cœur AVR 8bits @ 20 MHz
+					\item<2-> 2 Ko RAM, 32 Ko Progmem
+					\item<2-> I2C, SPI, UART
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	\end{block}
+	\begin{block}<3->{Microprocesseur}
+		\begin{columns}[t]
+			\begin{column}[T]{0.25\textwidth}
+				\begin{figure}
+					\includegraphics<3->[width=2.5cm]{img/imx.jpg}
+					\uncover<3->{\caption{NXP iMX6 Quad}}
+				\end{figure}
+			\end{column}
+			\begin{column}{0.70\textwidth}
+				\begin{itemize}
+					\item<4-> 36\euro / pièce
+					\item<4-> 4 Cœurs ARM 32 bits @ 1GHz
+					\item<4-> 256 Ko RAM, 96 Ko boot ROM
+					\item<4-> DDR3, SDIO, eth, USB, HDMI, PCIe\dots
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	\end{block}
+\end{frame}
+
+\begin{frame}
 	\begin{block}{Performances}
 		\begin{itemize}
 			\item Latences : Temps réel
@@ -58,14 +109,6 @@
 			\item Capacité de calcul
 		\end{itemize}
 	\end{block}
-	\begin{block}{Environnement}
-		\begin{itemize}
-			\item Durabilité
-			\item Environnement physique hostile
-			\item Consommation
-		\end{itemize}
-	\end{block}
-
 \end{frame}
 % Contraintes
 \subsection{Archi logicielle}
