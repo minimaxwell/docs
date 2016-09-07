@@ -6,7 +6,9 @@
 \usepackage{listings}
 \usepackage{eurosym}
 \usepackage{fancyvrb}
+\usepackage{textpos}
 \usetheme{Warsaw}
+\usepackage{eso-pic}
 
 \title[Linux Embarqué, INSA Rouen]{Découverte de Linux Embarqué}
 \author{maxime.chevallier@smile.fr}
@@ -29,6 +31,14 @@
     \hspace{1em}%
     \insertframenumber/\inserttotalframenumber
 }
+
+\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{%
+\put(\LenToUnit{0.8\paperwidth},\LenToUnit{0.9\paperheight}){#1}}}
+\AddToShipoutPictureFG{
+	  \AtPagemyUpperLeft{{\includegraphics[width=2cm,keepaspectratio]{img/owi-smile.png}}}
+  }%
+
+
 \setbeamercolor{footline}{fg=blue}
 \setbeamerfont{footline}{series=\bfseries}
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
