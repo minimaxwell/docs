@@ -2,24 +2,6 @@
 \begin{frame}[t]
 	\center{\huge{Système embarqué}}
 	\begin{columns}
-	\begin{column}[t]{0.45\linewidth}
-		\begin{figure}
-			\includegraphics<2->[height=2.5cm]{img/raspi.jpg}
-			\uncover<2->{\caption{Raspberry pi 2}}
-		\end{figure}
-	\end{column}
-	\begin{column}[t]{0.45\linewidth}
-		\begin{figure}
-			\includegraphics<3->[height=2.5cm]{img/arduino.jpg}
-			\uncover<3->{\caption{Arduino UNO}}
-		\end{figure}
-	\end{column}
-	\end{columns}
-	\uncover<4->{\center{Pas des systèmes embarqués :(}}
-\end{frame}
-\begin{frame}[t]
-	\center{\huge{Système embarqué}}
-	\begin{columns}
 	\begin{column}[t]{0.30\linewidth}
 		\begin{figure}
 			\includegraphics<2->[height=2.5cm]{img/roomba.jpg}
@@ -41,6 +23,26 @@
 	\end{columns}
 	\uncover<5->{\center{Systèmes embarqués :)}}
 \end{frame}
+
+\begin{frame}[t]
+	\center{\huge{Système embarqué}}
+	\begin{columns}
+	\begin{column}[t]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics<2->[height=2.5cm]{img/raspi.jpg}
+			\uncover<2->{\caption{Raspberry pi 2}}
+		\end{figure}
+	\end{column}
+	\begin{column}[t]{0.45\linewidth}
+		\begin{figure}
+			\includegraphics<3->[height=2.5cm]{img/arduino.jpg}
+			\uncover<3->{\caption{Arduino UNO}}
+		\end{figure}
+	\end{column}
+	\end{columns}
+	\uncover<4->{\center{Pas des systèmes embarqués :(}}
+\end{frame}
+
 % C'est quoi ?
 \subsection{Contraintes}
 \begin{frame}[t]
@@ -62,6 +64,24 @@
 	\end{block}
 \end{frame}
 
+\begin{frame}[t]
+	\center{\huge{Contraintes}}
+	\begin{block}{Performances}
+		\begin{itemize}
+			\item Latences : Temps réel
+			\item Temps de boot
+			\item Capacité de calcul
+		\end{itemize}
+	\end{block}
+	\begin{block}<2->{Environnement}
+		\begin{itemize}
+			\item Durabilité
+			\item Environnement physique hostile
+			\item Consommation
+			\item Normes ( Radio, GPS )
+		\end{itemize}
+	\end{block}
+\end{frame}
 
 \begin{frame}[t]
 	\begin{block}<1->{Microcontrôleur}
@@ -102,57 +122,40 @@
 	\end{block}
 \end{frame}
 
-\begin{frame}[t]
-	\center{\huge{Contraintes}}
-	\begin{block}{Performances}
-		\begin{itemize}
-			\item Latences : Temps réel
-			\item Temps de boot
-			\item Capacité de calcul
-		\end{itemize}
-	\end{block}
-	\begin{block}<2->{Environnement}
-		\begin{itemize}
-			\item Durabilité
-			\item Environnement physique hostile
-			\item Consommation
-			\item Normes ( Radio, GPS )
-		\end{itemize}
-	\end{block}
-\end{frame}
 
-\begin{frame}
-	\center{\huge{OS Temps-réel libres}}
-	\begin{block}<2->{Contiki}
-		\begin{columns}
-		\begin{column}{0.50\textwidth}
-		\begin{itemize}
-			\item Orienté Networking et IoT
-			\item Petite emprunte mémoire
-			\item Riche en fonctionnalités
-		\end{itemize}
-		\end{column}
-		\begin{column}{0.30\textwidth}
-			\includegraphics[height=2cm]{img/amp.jpg}
-		\end{column}
-		\end{columns}
-	\end{block}
-	\begin{block}<3->{freeRTOS}
-		\begin{columns}
-			\begin{column}{0.50\textwidth}
-				\begin{itemize}
-					\item Petite emprunte mémoire
-					\item Beaucoup d'architectures
-					\item Éprouvé dans l'industrie
-				\end{itemize}
-			\end{column}
-			\begin{column}{0.20\textwidth}
-				\includegraphics[height=2cm]{img/pt.jpg}
-			\end{column}
-			\begin{column}{0.20\textwidth}
-				\includegraphics[height=2cm]{img/cubesat.jpg}
-			\end{column}
-		\end{columns}
-	\end{block}
-\end{frame}
+% No time for this
+%\begin{frame}
+%	\center{\huge{OS Temps-réel libres}}
+%	\begin{block}<2->{Contiki}
+%		\begin{columns}
+%		\begin{column}{0.50\textwidth}
+%		\begin{itemize}
+%			\item Orienté Networking et IoT
+%			\item Petite emprunte mémoire
+%			\item Riche en fonctionnalités
+%		\end{itemize}
+%		\end{column}
+%		\begin{column}{0.30\textwidth}
+%			\includegraphics[height=2cm]{img/amp.jpg}
+%		\end{column}
+%		\end{columns}
+%	\end{block}
+%	\begin{block}<3->{freeRTOS}
+%		\begin{columns}
+%			\begin{column}{0.50\textwidth}
+%				\begin{itemize}
+%					\item Petite emprunte mémoire
+%					\item Beaucoup d'architectures
+%					\item Éprouvé dans l'industrie
+%				\end{itemize}
+%			\end{column}
+%			\begin{column}{0.20\textwidth}
+%				\includegraphics[height=2cm]{img/pt.jpg}
+%			\end{column}
+%			\begin{column}{0.20\textwidth}
+%				\includegraphics[height=2cm]{img/cubesat.jpg}
+%			\end{column}
+%		\end{columns}
+%	\end{block}
+%\end{frame}
 
