@@ -21,8 +21,8 @@ clean :
 	rm -f *.snm
 	rm -f *.toc
 	rm -f *.vrb
+	rm -f *.pdf
 	rm -f *.pyg
 
 mr_proper : clean
-	rm -f *.pdf
 	rm -f $(IMG_SVG)
