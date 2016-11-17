@@ -2,14 +2,39 @@
 
 \begin{frame}
 	\frametitle{BlueZ}
+	\begin{itemize}
+	\item 2001 : Max Krasnyansky ( Qualcomm ) \\ Kernel 2.4.6
+	\item 2004 : Marcel Holtmann ( Intel )\\ Kernel 2.6
+	\item 2012 : Low Energy ( BlueZ 5.0 ) \\ Kernel 3.5
+\item 2016 : BlueZ 5.43
+	\end{itemize}
+	\textbf{APIs} : \textit{DBus}, \textit{Socket}, \textit{Librairie C}
 \end{frame}
 
 \begin{frame}
-	\frametitle{BLE dans BlueZ}
-\end{frame}
-
-\begin{frame}
-	\frametitle{GATT dans BlueZ}
+	\frametitle{Bluez : Architecture}
+	\begin{minipage}{0.50\linewidth}
+	\begin{figure}
+		\includegraphics[height=5cm]{img/bluez.png}
+	\end{figure}
+	\end{minipage}
+	\begin{minipage}{0.32\linewidth}
+		\begin{block}{userspace}
+			\begin{itemize}
+				\item Profils
+				\item API Dbus
+				\item Bluetoothd \\ {\tiny{le démon à tout faire}}
+			\end{itemize}
+		\end{block}
+		\begin{block}{kernel}
+			\begin{itemize}
+				\item HCI
+				\item Drivers
+				\item Protocoles
+				\item mgmt \\ {\small{l'API à tout faire}}
+			\end{itemize}
+		\end{block}
+	\end{minipage}
 \end{frame}
 
 \begin{frame}

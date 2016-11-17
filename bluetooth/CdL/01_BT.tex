@@ -1,4 +1,4 @@
-\section{Bluetooth(s)}
+\section{Bluetooth}
 
 \begin{frame}[t]
 	\frametitle{Bluetooth}
@@ -20,6 +20,23 @@
 			\includegraphics[height=2.5cm]{img/bt_logo.png}
 		\end{figure}
 	\end{minipage}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Standard Bluetooth}
+	\center{\textbf{Services}, \textbf{Profils} et \textbf{Protocoles}}
+	\vspace{0.5cm}
+	\begin{itemize}
+		\item Liaison physique
+		\item Adressage physique
+		\item Controle de flux
+		\item Multiplexage
+		\item Chiffrement
+		\item Protocoles over Bluetooth
+		\item "Profils"
+	\end{itemize}
+	\vspace{0.5cm}
+	\tiny{\url{https://www.bluetooth.com/specifications/adopted-specifications}}
 \end{frame}
 
 \begin{frame}
@@ -65,6 +82,36 @@
 	\end{minipage}
 \end{frame}
 
+
+\begin{frame}
+	\frametitle{Architecture physique}
+	\begin{block}{Host et controller séparés}
+		\begin{minipage}[t]{0.48\linewidth}
+		\begin{figure}
+			\includegraphics[width=4cm]{img/HC_sep.png}
+		\end{figure}
+		\end{minipage}
+		\begin{minipage}[t]{0.48\linewidth}
+		\begin{figure}
+			\includegraphics[width=3cm]{img/dongle.jpg}
+		\end{figure}
+		\end{minipage}
+	\end{block}
+	\begin{block}{System on a Chip}
+		\begin{minipage}[t]{0.48\linewidth}
+		\begin{figure}
+			\includegraphics[width=2cm]{img/HC_soc.png}
+		\end{figure}
+		\end{minipage}
+		\begin{minipage}[t]{0.48\linewidth}
+		\begin{figure}
+			\includegraphics[width=3cm]{img/rpi3.png}
+		\end{figure}
+		\end{minipage}
+	\end{block}
+\end{frame}
+
+
 \begin{frame}[t]
 	\frametitle{Bluetooth Classique}
 	\begin{minipage}[t]{0.30\linewidth}
@@ -94,30 +141,28 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Bluetooth Low Energy}
-	\begin{minipage}[t]{0.30\linewidth}
-		\vspace{0.5cm}
-		\begin{block}{Radio}
+	\frametitle{Architecture logique}
+	\begin{minipage}{0.45\linewidth}
+		\begin{figure}
+			\includegraphics[height=6cm]{img/HCI.png}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{0.50\linewidth}
+		\begin{block}{Host}
 			\begin{itemize}
-				\item 2.4 GHZ
-				\item 40 canaux
+				\item Profils et applications
+				\item Différents protocoles
+				\item Abstraction
+				\item Multiplexage
 			\end{itemize}
 		\end{block}
-	\end{minipage}
-	\begin{minipage}[t]{0.66\linewidth}
-		\vspace{0.5cm}
-		\center{\Large{Services}}
-		\vspace{0.5cm}
-		\begin{itemize}
-			\item "Healthcare"
-			\item "Fitness"
-			\item "Human Interface Device"
-			\item "ALert"
-			\item "Proximity"
-			\item Capteurs génériques
-			\item Découverte de services
-			\item Et bien plus...
-		\end{itemize}
+		\begin{block}{Controller}
+			\begin{itemize}
+				\item Chiffrement
+				\item Connexion
+				\item Transmission physique
+			\end{itemize}
+		\end{block}
 	\end{minipage}
 \end{frame}
 
