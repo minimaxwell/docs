@@ -17,7 +17,7 @@
 	\end{minipage}
 	\begin{minipage}[t]{0.25\linewidth}
 		\begin{figure}
-			\includegraphics[height=2.5cm]{img/bt_logo.png}
+			\includegraphics[height=3cm]{img/bt_logo.png}
 		\end{figure}
 	\end{minipage}
 \end{frame}
@@ -43,6 +43,7 @@
 	\frametitle{Dénomination}
 
 	\begin{minipage}[t]{0.30\linewidth}
+		\uncover<1->{
 		\begin{block}{Classique}
 			\begin{itemize}
 				\item Classique
@@ -54,8 +55,10 @@
 		\begin{figure}
 			\includegraphics[width=\linewidth]{img/Bluetooth_Logo.png}
 		\end{figure}
+		}
 	\end{minipage}
 	\begin{minipage}[t]{0.30\linewidth}
+		\uncover<3->{
 		\begin{block}{Les deux}
 			\begin{itemize}
 				\item Dual mode
@@ -66,8 +69,10 @@
 		\begin{figure}
 			\includegraphics[width=\linewidth]{img/Bluetooth_Smart_Ready_Logo.jpg}
 		\end{figure}
+		}
 	\end{minipage}
 	\begin{minipage}[t]{0.30\linewidth}
+		\uncover<2->{
 		\begin{block}{Low Energy}
 			\begin{itemize}
 				\item Low Energy
@@ -79,12 +84,14 @@
 		\begin{figure}
 			\includegraphics[width=\linewidth]{img/Bluetooth_Smart_Logo.png}
 		\end{figure}
+		}
 	\end{minipage}
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{Architecture physique}
+	\uncover<1->{
 	\begin{block}{Host et controller séparés}
 		\begin{minipage}[t]{0.48\linewidth}
 		\begin{figure}
@@ -97,6 +104,8 @@
 		\end{figure}
 		\end{minipage}
 	\end{block}
+	}
+	\uncover<2->{
 	\begin{block}{System on a Chip}
 		\begin{minipage}[t]{0.48\linewidth}
 		\begin{figure}
@@ -109,21 +118,12 @@
 		\end{figure}
 		\end{minipage}
 	\end{block}
+	}
 \end{frame}
 
 
 \begin{frame}[t]
 	\frametitle{Bluetooth Classique}
-	\begin{minipage}[t]{0.30\linewidth}
-		\vspace{0.5cm}
-		\begin{block}{Radio}
-			\begin{itemize}
-				\item 2.4 GHZ
-				\item 79 canaux
-				\item FHSS
-			\end{itemize}
-		\end{block}
-	\end{minipage}
 	\begin{minipage}[t]{0.66\linewidth}
 		\vspace{0.5cm}
 		\center{\Large{Profils}}
@@ -138,6 +138,16 @@
 			\item Découverte de services
 		\end{itemize}
 	\end{minipage}
+	\begin{minipage}[t]{0.30\linewidth}
+		\vspace{0.5cm}
+		\begin{block}{Radio}
+			\begin{itemize}
+				\item 2.4 GHZ
+				\item 79 canaux
+				\item FHSS
+			\end{itemize}
+		\end{block}
+	\end{minipage}
 \end{frame}
 
 \begin{frame}
@@ -148,6 +158,7 @@
 		\end{figure}
 	\end{minipage}
 	\begin{minipage}{0.50\linewidth}
+		\uncover<2->{
 		\begin{block}{Host}
 			\begin{itemize}
 				\item Profils et applications
@@ -156,6 +167,7 @@
 				\item Multiplexage
 			\end{itemize}
 		\end{block}
+	}
 		\begin{block}{Controller}
 			\begin{itemize}
 				\item Chiffrement

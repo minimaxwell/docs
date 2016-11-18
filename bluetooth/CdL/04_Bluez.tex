@@ -23,6 +23,7 @@
 	\end{figure}
 	\end{minipage}
 	\begin{minipage}{0.32\linewidth}
+		\uncover<2->{
 		\begin{block}{userspace}
 			\begin{itemize}
 				\item Profils
@@ -30,6 +31,7 @@
 				\item Bluetoothd \\ {\tiny{le démon à tout faire}}
 			\end{itemize}
 		\end{block}
+}
 		\begin{block}{kernel}
 			\begin{itemize}
 				\item HCI
@@ -44,6 +46,7 @@
 \begin{frame}
 	\frametitle{Outils pratiques}
 	\begin{minipage}{0.46\linewidth}
+		\uncover<1->{
 		\begin{block}{bluetoothctl}
 			\begin{itemize}
 				\item UI de bluetoothd
@@ -51,6 +54,8 @@
 				\item Gestion des profils
 			\end{itemize}
 		\end{block}
+	}
+	\uncover<3->{
 		\begin{block}{btmon}
 			\begin{itemize}
 				\item Monitore HCI
@@ -58,8 +63,10 @@
 				\item Excellent pour le debug
 			\end{itemize}
 		\end{block}
+	}
 	\end{minipage}
 	\begin{minipage}{0.46\linewidth}
+		\uncover<2->{
 		\begin{block}{btmgmt}
 			\begin{itemize}
 				\item Utilise la MGMT API
@@ -67,6 +74,8 @@
 				\item Gestion du dual-mode
 			\end{itemize}
 		\end{block}
+	}
+	\uncover<4->{
 		\begin{block}{GATT}
 			\begin{itemize}
 				\item gatttool
@@ -74,13 +83,14 @@
 				\item btgatt-server
 			\end{itemize}
 		\end{block}
+	}
 	\end{minipage}
 	\vspace{0.5cm}
 	\small{
 
-	\textbf{A voir aussi} : \textit{obexctl}, \textit{rfcomm}, \textit{l2ping}, \textit{hciattach}
+	\uncover<5->{\textbf{A voir aussi} : \textit{obexctl}, \textit{rfcomm}, \textit{l2ping}, \textit{hciattach}}
 
-	\textbf{Déprécié} : \textit{hciconfig}, \textit{hcitool}, \textit{hcidump}, \textit{sdptool}
+	\uncover<6->{\textbf{Déprécié} : \textit{hciconfig}, \textit{hcitool}, \textit{hcidump}, \textit{sdptool}}
 	}
 
 \end{frame}

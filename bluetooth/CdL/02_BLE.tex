@@ -2,15 +2,6 @@
 
 \begin{frame}
 	\frametitle{Bluetooth Low Energy}
-	\begin{minipage}[t]{0.30\linewidth}
-		\vspace{0.5cm}
-		\begin{block}{Radio}
-			\begin{itemize}
-				\item 2.4 GHZ
-				\item 40 canaux
-			\end{itemize}
-		\end{block}
-	\end{minipage}
 	\begin{minipage}[t]{0.66\linewidth}
 		\vspace{0.5cm}
 		\center{\Large{Services}}
@@ -25,6 +16,15 @@
 			\item Découverte de services
 			\item Et bien plus...
 		\end{itemize}
+	\end{minipage}
+	\begin{minipage}[t]{0.30\linewidth}
+		\vspace{0.5cm}
+		\begin{block}{Radio}
+			\begin{itemize}
+				\item 2.4 GHZ
+				\item 40 canaux
+			\end{itemize}
+		\end{block}
 	\end{minipage}
 \end{frame}
 
@@ -57,12 +57,12 @@
 	\end{minipage}
 	\begin{minipage}{0.35\linewidth}
 		\begin{itemize}
-			\item Idle \\ {\tiny{On ne fait rien}}
-			\item Advertising \\ {\tiny{Broadcast, connectable ou non}}
-			\item Scanning \\ {\tiny{Ecoute d'advertisements}}
-			\item Initiating \\ {\tiny{Ecoute d'advertisements}} \\
+			\item<1-> Idle \\ {\tiny{On ne fait rien}}
+			\item<2-> Advertising \\ {\tiny{Broadcast, connectable ou non}}
+			\item<3-> Scanning \\ {\tiny{Ecoute d'advertisements}}
+			\item<4-> Initiating \\ {\tiny{Ecoute d'advertisements}} \\
 								{\tiny{Réponse par connexion}}
-			\item Connection \\ {\tiny{Connecté}} \\
+			\item<5-> Connection \\ {\tiny{Connecté}} \\
 				{\tiny{Master (depuis Initiating) ou}} \\
 				{\tiny{Slave (Depuis Advertising)}}
 		\end{itemize}
