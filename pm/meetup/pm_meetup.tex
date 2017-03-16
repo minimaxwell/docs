@@ -1,0 +1,34 @@
+% The default theme, with plain white background
+%\documentclass[bgimages]{smilebeamer}
+
+% If you don't like oranges and such in the background remove the [bgimages] like this :
+\documentclass{smilebeamer}
+
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+\usepackage{hyperref}
+\usepackage{minted}
+
+\title{Power Management dans Linux}
+\author{maxime.chevallier@smile.fr}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]
+    \title{Introduction au Power Management dans Linux}
+    \subtitle{Implémentation, Utilisation et Benchmark}
+    \titlepage
+\end{frame}
+
+
+\input{01_Intro.tex}
+\input{02_runtime_pm.tex}
+\input{03_sleep.tex}
+\begin{frame}
+	\frametitle{C'est fini}
+	\center{\huge{Merci}}
+\end{frame}
+\end{document}
+
