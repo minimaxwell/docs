@@ -6,10 +6,64 @@
 
 \begin{frame}
 	\frametitle{Modes d'endormissement}
+	\textbf{ACPI State : S1}
+	\begin{block}{Suspend to Idle}
+		\begin{itemize}
+			\item Freeze userspace
+			\item Périphériques lowpower
+		\end{itemize}
+	\end{block}
+	\texttt{freeze > /sys/power/state}
+\end{frame}
+\begin{frame}
+	\frametitle{Modes d'endormissement}
+	\textbf{ACPI State : S2}
+	\begin{block}{Standby}
+		\begin{itemize}
+			\item Coupure des coeurs non-boot
+			\item Coupure de certains composants bas niveau
+		\end{itemize}
+	\end{block}
+	\texttt{standby > /sys/power/state}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Modes d'endormissement}
+	\textbf{ACPI State : S3}
+	\begin{block}{Suspend to RAM}
+		\begin{itemize}
+			\item Périphériques en lowpower
+			\item CPU en lowpower
+			\item RAM en auto-rafraichissement
+		\end{itemize}
+	\end{block}
+	\texttt{mem > /sys/power/state}
+\end{frame}
+\begin{frame}
+	\frametitle{Modes d'endormissement}
+	\textbf{ACPI State : S4}
+	\begin{block}{Suspend to disk}
+		\begin{itemize}
+			\item Image mémoire persistée
+			\item Système en lowpower, voire éteint
+		\end{itemize}
+	\end{block}
+	\texttt{disk > /sys/power/state}
+	\begin{block}{parametres}
+		\texttt{/sys/power/disk}
+		\begin{itemize}
+			\item \texttt{platform}
+			\item \texttt{shutdown}
+			\item \texttt{reboot}
+			\item \texttt{suspend}
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Wakeup}
+	Comment sortir le système de l'endormissement ?
+	\texttt{enabled > /sys/devices/.../power/wakeup}
 \end{frame}
 
 

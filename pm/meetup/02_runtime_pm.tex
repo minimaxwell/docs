@@ -1,37 +1,127 @@
 \section{Power Management Dynamique}
 
 \begin{frame}
+	\frametitle{Power Management Dynamique}
+	\center{\Large{Minimiser la consommation d'un système actif}}
+	\begin{block}{Compromis}
+	\begin{itemize}
+		\item Ressources utilisées
+		\item Ressources nécessaires
+		\item Latences acceptables
+		\item Consommation actuelle
+		\item Température actuelle
+	\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
 	\frametitle{PM Core}
+	\begin{block}{Au coeur du noyau}
+		\begin{itemize}
+			\item Synchronisation entre tous les composants
+			\item API pour drivers, bindings device-tree
+			\item PM dynamique et modes d'endormissement
+		\end{itemize}
+	\end{block}
+	\begin{block}{runtime\_pm}
+		Controller dynamiquement l'état des périphériques
+		\begin{itemize}
+			\item Gestion des dépendances inter-périphériques
+			\item Ordonancement par le noyau
+			\item Plutôt transparent pour l'utilisateur
+		\end{itemize}
+	\end{block}
+
 \end{frame}
 
 \begin{frame}
-	\frametitle{Runtime PM}
+	\frametitle{Quality of Service}
+	Indiquer au noyau les latence et débits à respecter
+	\begin{block}{Paramètres globaux}
+		\begin{itemize}
+			\item \texttt{cpu\_dma\_latency} (µs)
+			\item \texttt{memory\_bandwidth} (mbps)
+			\item \texttt{network\_latency} (µs)
+			\item \texttt{network\_throughput} (kbps)
+		\end{itemize}
+	\end{block}
+	Interface Userspace : \texttt{/dev/*} + sysfs
 \end{frame}
 
-\begin{frame}
-	\frametitle{Domaines}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{API Interne}
-\end{frame}
 
 \begin{frame}
 	\frametitle{CPU Idle}
+	\begin{block}{Que faire quand le CPU n'a rien à faire ?}
+	\begin{itemize}
+		\item Choix du mode (governor)
+		\item Implémentation (driver)
+	\end{itemize}
+	\end{block}
+	\begin{block}{struct cpuidle\_state}
+		\begin{itemize}
+			\item exit\_latency
+			\item power\_usage
+			\item target\_residency
+		\end{itemize}
+	\end{block}
+	powertop, /sys/devices/system/cpu/cpuX/cpuidle
 \end{frame}
 
 \begin{frame}
-	\frametitle{cpufreq / busfreq / devfreq}
-	OPPs
+	\frametitle{DVFS}
+	\textbf{D}ynamic \textbf{V}oltage and \textbf{F}requency \textbf{S}caling
+	\begin{block}{cpufreq}
+		\begin{itemize}
+			\item Implémentation hardware (policy)
+			\item Implémentation software (governor) :
+				\begin{itemize}
+					\item \texttt{performance}
+					\item \texttt{powersave}
+					\item \texttt{ondemand}
+					\item \texttt{conservative}
+					\item \texttt{userspace}
+					\item \texttt{schedutil} (linux 4.6)
+				\end{itemize}
+		\end{itemize}
+		\texttt{/sys/devices/system/cpu/cpuX/cpufreq/}
+	\end{block}
+	\begin{block}{devfreq}
+		Similaire pour les devices non-CPU
+	\end{block}
 \end{frame}
 
 \begin{frame}
-	\frametitle{clocks / regulators}
-\end{frame}
+	\frametitle{Operating Performance Points}
+	\begin{block}{Tuples (Fréquence, Tension) pour un périphérique}
+	\texttt{operating-points = <}
 
+	\texttt{     /* kHz    uV */}
+
+	\texttt{     792000  1100000}
+
+	\texttt{     396000  950000}
+
+	\texttt{     198000  850000}
+
+	\texttt{     >;}
+	\end{block}
+\end{frame}
 \begin{frame}
 	\frametitle{thermal}
+	Actions en fonction de la température
+	\begin{block}{Thermal zone}
+		\begin{itemize}
+			\item Température (\texttt{trip\_point})
+			\item Politique 
+			\item Cooling device
+		\end{itemize}
+	\end{block}
+	\begin{block}{Cooling device}
+		\begin{itemize}
+			\item Hardware : Ventilateur
+			\item Software : cpufreq
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 
