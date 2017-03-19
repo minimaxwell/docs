@@ -1,54 +1,62 @@
 \section{Endormissement}
 
 \begin{frame}
-	\frametitle{ACPI}
-\end{frame}
-
-\begin{frame}
 	\frametitle{Modes d'endormissement}
 	\textbf{ACPI State : S1}
+
+	\texttt{freeze > /sys/power/state}
 	\begin{block}{Suspend to Idle}
 		\begin{itemize}
 			\item Freeze userspace
 			\item Périphériques lowpower
+			\item Toujours supporté
 		\end{itemize}
 	\end{block}
-	\texttt{freeze > /sys/power/state}
+	Réveil en quelques millisecondes
 \end{frame}
 \begin{frame}
 	\frametitle{Modes d'endormissement}
 	\textbf{ACPI State : S2}
+
+	\texttt{standby > /sys/power/state}
 	\begin{block}{Standby}
 		\begin{itemize}
+			\item Suspend to Idle +
 			\item Coupure des coeurs non-boot
 			\item Coupure de certains composants bas niveau
+			\item Support dépendant de la plateforme
 		\end{itemize}
 	\end{block}
-	\texttt{standby > /sys/power/state}
+	Réveil en quelques millisecondes
 \end{frame}
 
 \begin{frame}
 	\frametitle{Modes d'endormissement}
 	\textbf{ACPI State : S3}
+
+	\texttt{mem > /sys/power/state}
 	\begin{block}{Suspend to RAM}
 		\begin{itemize}
+			\item Standby +
 			\item Périphériques en lowpower
 			\item CPU en lowpower
 			\item RAM en auto-rafraichissement
+			\item Support dépendant de la plateforme
 		\end{itemize}
 	\end{block}
-	\texttt{mem > /sys/power/state}
+	Réveil en quelques centaines de millisecondes
 \end{frame}
 \begin{frame}
 	\frametitle{Modes d'endormissement}
 	\textbf{ACPI State : S4}
+
+	\texttt{disk > /sys/power/state}
 	\begin{block}{Suspend to disk}
 		\begin{itemize}
 			\item Image mémoire persistée
 			\item Système en lowpower, voire éteint
 		\end{itemize}
 	\end{block}
-	\texttt{disk > /sys/power/state}
 	\begin{block}{parametres}
 		\texttt{/sys/power/disk}
 		\begin{itemize}
@@ -62,8 +70,22 @@
 
 \begin{frame}
 	\frametitle{Wakeup}
-	Comment sortir le système de l'endormissement ?
-	\texttt{enabled > /sys/devices/.../power/wakeup}
+	\begin{block}{Device Tree}
+		\begin{itemize}
+			\item \texttt{wakeup-source} (Générique)
+			\item \texttt{gpio-key,wakeup}
+			\item \texttt{enable-sdio-wakeup}
+			\item \texttt{linux,wakeup}
+			\item etc. (Anciens bindings)
+		\end{itemize}
+	\end{block}
+	\begin{block}{sysfs}
+		\begin{itemize}
+			\item \texttt{enabled > /sys/devices/.../power/wakeup}
+			\item \texttt{disabled > /sys/devices/.../power/wakeup}
+		\end{itemize}
+	\end{block}
+	Consultation : \texttt{/sys/kernel/debug/wakeup\_sources}
 \end{frame}
 
 

@@ -64,7 +64,23 @@
 			\item target\_residency
 		\end{itemize}
 	\end{block}
-	powertop, /sys/devices/system/cpu/cpuX/cpuidle
+		powertop, /sys/devices/system/cpu/cpuX/cpuidle
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{cpuidle i7 4702MQ}
+	\begin{block}{i7 4702MQ}
+\begin{verbatim}
+name     latency  residency utilisation
+C0       -        -         1.5%
+POLL     0        0         0.2%
+C1-HSW   2        2         0.6%
+C1E-HSW  10       20        0.2%
+C3-HSW   33       100       0.0%
+C6-HSW   133      400       0.0%
+C7s-HSW  166      500       97.4%
+\end{verbatim}
+		\end{block}
 \end{frame}
 
 \begin{frame}
@@ -125,3 +141,20 @@
 \end{frame}
 
 
+\begin{frame}
+	\frametitle{Vue d'ensemble}
+	\begin{block}{Composants liés}
+		\begin{itemize}
+			\item Scheduler
+			\item cpuidle
+			\item cpufreq
+			\item thermal
+		\end{itemize}
+	\end{block}
+	\begin{block}{A venir}
+		\begin{itemize}
+			\item Unifier cpuidle et cpufreq
+			\item Energy Aware Scheduler
+		\end{itemize}
+	\end{block}
+\end{frame}
