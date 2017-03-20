@@ -1,5 +1,24 @@
 \section{Endormissement}
 
+\begin{frame}[fragile]
+	\frametitle{PM core}
+	\begin{block}{struct dev\_pm\_ops}
+Ensemble de callbacks : 
+
+\begin{verbatim}
+prepare()    freeze()
+complete()   thaw()
+suspend()    poweroff()
+resume()     restore()
+\end{verbatim}
+	\end{block}
+	\begin{block}{Wakeup}
+		\begin{itemize}
+			\item \texttt{enable\_irq\_wake()}
+			\item \texttt{disable\_irq\_wake()}
+		\end{itemize}
+	\end{block}
+\end{frame}
 \begin{frame}
 	\frametitle{Modes d'endormissement}
 	\textbf{ACPI State : S1}
@@ -7,6 +26,7 @@
 	\texttt{freeze > /sys/power/state}
 	\begin{block}{Suspend to Idle}
 		\begin{itemize}
+			\item Entièrement software
 			\item Freeze userspace
 			\item Périphériques lowpower
 			\item Toujours supporté

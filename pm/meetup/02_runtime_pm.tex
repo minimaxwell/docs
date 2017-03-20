@@ -14,28 +14,49 @@
 	\end{block}
 \end{frame}
 
-\begin{frame}
-	\frametitle{PM Core}
-	\begin{block}{Au coeur du noyau}
+\begin{frame}[fragile]
+	\frametitle{PM pour les périphériques}
+	\begin{block}{PM core}
 		\begin{itemize}
-			\item Synchronisation entre tous les composants
-			\item API pour drivers, bindings device-tree
-			\item PM dynamique et modes d'endormissement
+			\item API pour drivers
+			\item Interface sysfs
+			\item PM dynamique
+			\item Modes d'endormissement
 		\end{itemize}
 	\end{block}
-\end{frame}
-\begin{frame}
-	\frametitle{runtime\_pm}
-	\begin{block}{Controller dynamiquement l'état des périphériques}
-		\begin{itemize}
-			\item API : Callbacks, fonctions \texttt{pm\_runtime\_*}
-			\item Basé sur du comptage de références
-			\item Support de l'autosuspend
-			\item Coordonné par le noyau
-		\end{itemize}
-	\end{block}
-\end{frame}
+	\textbf{Documentation} : \texttt{Documentation/power}
 
+	\textbf{Headers} : \texttt{include/linux/pm.h}
+
+	\textbf{Implémentation} : \texttt{kernel/power/}
+\end{frame}
+\begin{frame}[fragile]
+	\frametitle{runtime\_pm}
+	\begin{block}{Etats}
+		\begin{itemize}
+			\item \texttt{active} : Est capable d'I/O
+			\item \texttt{suspended} : Pas d'I/O
+		\end{itemize}
+	\end{block}
+	\begin{minipage}[t]{0.45\linewidth}
+		\begin{center}Callbacks\end{center}
+		\begin{verbatim}
+runtime_suspend(dev)
+runtime_resume(dev)
+runtime_idle(dev)
+		\end{verbatim}
+	\end{minipage}
+	\begin{minipage}[t]{0.45\linewidth}
+		\begin{center}Helpers\end{center}
+		\begin{verbatim}
+pm_runtime_*
+pm_request_*
+pm_schedule_*
+pm_runtime_{get,put}*
+pm_*_autosuspend
+		\end{verbatim}
+	\end{minipage}
+\end{frame}
 \begin{frame}
 	\frametitle{Quality of Service}
 	Indiquer au noyau les latence et débits à respecter
@@ -68,12 +89,13 @@
 			\item \texttt{int enter([...], int index)}
 		\end{itemize}
 	\end{block}
-		powertop, /sys/devices/system/cpu/cpuX/cpuidle
+	\texttt{powertop, /sys/devices/system/cpu/cpuX/cpuidle}
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{cpuidle i7 4702MQ}
-	\begin{block}{i7 4702MQ}
+	\frametitle{cpuidle}
+	\center{\large{Driver \texttt{intel\_idle}}}
+	\begin{block}{i7 4702MQ }
 \begin{verbatim}
 name     latency  residency utilisation
 C0       -        -         1.5%
@@ -86,6 +108,22 @@ C7s-HSW  166      500       97.4%
 \end{verbatim}
 		\end{block}
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{cpuidle}
+	\center{\large{Driver ACPI \texttt{processor\_idle}}}
+	\begin{block}{i5 6500}
+\begin{verbatim}
+name     latency  residency
+C0       -        -         
+POLL     0        0         
+C1       1        2         
+C2       151      302       
+C3       256      512       
+\end{verbatim}
+		\end{block}
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{DVFS}
@@ -146,14 +184,9 @@ C7s-HSW  166      500       97.4%
 
 \begin{frame}
 	\frametitle{Vue d'ensemble}
-	\begin{block}{Composants liés}
-		\begin{itemize}
-			\item Scheduler
-			\item cpuidle
-			\item cpufreq
-			\item thermal
-		\end{itemize}
-	\end{block}
+	\begin{center}
+		\includegraphics[width=6cm]{img/overview.png}
+	\end{center}
 	\begin{block}{A venir}
 		\begin{itemize}
 			\item Unifier cpuidle et cpufreq
