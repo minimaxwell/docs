@@ -23,15 +23,17 @@
 			\item PM dynamique et modes d'endormissement
 		\end{itemize}
 	\end{block}
-	\begin{block}{runtime\_pm}
-		Controller dynamiquement l'état des périphériques
+\end{frame}
+\begin{frame}
+	\frametitle{runtime\_pm}
+	\begin{block}{Controller dynamiquement l'état des périphériques}
 		\begin{itemize}
-			\item Gestion des dépendances inter-périphériques
-			\item Ordonancement par le noyau
-			\item Plutôt transparent pour l'utilisateur
+			\item API : Callbacks, fonctions \texttt{pm\_runtime\_*}
+			\item Basé sur du comptage de références
+			\item Support de l'autosuspend
+			\item Coordonné par le noyau
 		\end{itemize}
 	\end{block}
-
 \end{frame}
 
 \begin{frame}
@@ -59,9 +61,11 @@
 	\end{block}
 	\begin{block}{struct cpuidle\_state}
 		\begin{itemize}
-			\item exit\_latency
-			\item power\_usage
-			\item target\_residency
+			\item \texttt{flags}
+			\item \texttt{exit\_latency}
+			\item \texttt{power\_usage}
+			\item \texttt{target\_residency}
+			\item \texttt{int enter([...], int index)}
 		\end{itemize}
 	\end{block}
 		powertop, /sys/devices/system/cpu/cpuX/cpuidle
@@ -139,7 +143,6 @@ C7s-HSW  166      500       97.4%
 		\end{itemize}
 	\end{block}
 \end{frame}
-
 
 \begin{frame}
 	\frametitle{Vue d'ensemble}
