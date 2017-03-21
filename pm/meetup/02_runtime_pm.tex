@@ -77,13 +77,16 @@ pm_*_autosuspend
 	\begin{block}{Que faire quand le CPU n'a rien à faire ?}
 	\begin{itemize}
 		\item Choix du mode (governor)
+			\begin{itemize}
+				\item \texttt{select()}
+				\item \texttt{reflect()}
+			\end{itemize}
 		\item Implémentation (driver)
 	\end{itemize}
 	\end{block}
 	\uncover<2->{
 	\begin{block}{struct cpuidle\_state}
 		\begin{itemize}
-			\item \texttt{flags}
 			\item \texttt{exit\_latency}
 			\item \texttt{power\_usage}
 			\item \texttt{target\_residency}
