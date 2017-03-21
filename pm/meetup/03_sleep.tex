@@ -79,6 +79,9 @@ resume()     restore()
 			\item Système en lowpower, voire éteint
 		\end{itemize}
 	\end{block}
+	\vspace{-0.5cm}
+	\begin{minipage}[t]{0.45\linewidth}
+		\uncover<2->{
 	\begin{block}{parametres}
 		\texttt{/sys/power/disk}
 		\begin{itemize}
@@ -88,6 +91,21 @@ resume()     restore()
 			\item \texttt{suspend}
 		\end{itemize}
 	\end{block}
+}
+	\end{minipage}
+	\begin{minipage}[t]{0.45\linewidth}
+		\uncover<3->{
+		\begin{block}{Processus}
+			\begin{enumerate}
+				\item<4-> Suspend
+				\item<5-> Snapshot
+				\item<6-> Resume
+				\item<7-> Write
+				\item<8-> Poweroff
+			\end{enumerate}
+		\end{block}
+	}
+	\end{minipage}
 \end{frame}
 
 \begin{frame}
