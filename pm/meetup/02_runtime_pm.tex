@@ -80,6 +80,7 @@ pm_*_autosuspend
 		\item Implémentation (driver)
 	\end{itemize}
 	\end{block}
+	\uncover<2->{
 	\begin{block}{struct cpuidle\_state}
 		\begin{itemize}
 			\item \texttt{flags}
@@ -89,7 +90,10 @@ pm_*_autosuspend
 			\item \texttt{int enter([...], int index)}
 		\end{itemize}
 	\end{block}
+}
+\uncover<3->{
 	\texttt{powertop, /sys/devices/system/cpu/cpuX/cpuidle}
+}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -128,24 +132,28 @@ C3       256      512
 \begin{frame}
 	\frametitle{DVFS}
 	\textbf{D}ynamic \textbf{V}oltage and \textbf{F}requency \textbf{S}caling
+	\uncover<2->{
 	\begin{block}{cpufreq}
 		\begin{itemize}
-			\item Implémentation hardware (policy)
-			\item Implémentation software (governor) :
+			\item<3-> Implémentation hardware (policy)
+			\item<4-> Implémentation software (governor) :
 				\begin{itemize}
-					\item \texttt{performance}
-					\item \texttt{powersave}
-					\item \texttt{ondemand}
-					\item \texttt{conservative}
-					\item \texttt{userspace}
-					\item \texttt{schedutil} (linux 4.6)
+					\item<5-> \texttt{performance}
+					\item<6-> \texttt{powersave}
+					\item<7-> \texttt{userspace}
+					\item<8-> \texttt{ondemand}
+					\item<9-> \texttt{conservative}
+					\item<10-> \texttt{schedutil} (linux 4.6)
 				\end{itemize}
 		\end{itemize}
 		\texttt{/sys/devices/system/cpu/cpuX/cpufreq/}
 	\end{block}
+}
+\uncover<11->{
 	\begin{block}{devfreq}
 		Similaire pour les devices non-CPU
 	\end{block}
+}
 \end{frame}
 
 \begin{frame}
@@ -169,28 +177,41 @@ C3       256      512
 	Actions en fonction de la température
 	\begin{block}{Thermal zone}
 		\begin{itemize}
-			\item Température (\texttt{trip\_point})
-			\item Politique 
-			\item Cooling device
+			\item<2-> Température (\texttt{trip\_point})
+			\item<3-> Politique :
+				\begin{itemize}
+					\item<4-> \texttt{step\_wise}
+					\item<5-> \texttt{fair\_share}
+					\item<6-> \texttt{userspace}
+				\end{itemize}
+			\item<7-> Cooling device
 		\end{itemize}
 	\end{block}
+	\uncover<8->{
 	\begin{block}{Cooling device}
 		\begin{itemize}
 			\item Hardware : Ventilateur
 			\item Software : cpufreq
 		\end{itemize}
 	\end{block}
+}
+\uncover<9->{
+	\texttt{/sys/class/thermal/}
+}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Vue d'ensemble}
 	\begin{center}
-		\includegraphics[width=6cm]{img/overview.png}
+		placeholder
+%		\includegraphics[width=6cm]{img/overview.png}
 	\end{center}
+	\uncover<2->{
 	\begin{block}{A venir}
 		\begin{itemize}
 			\item Unifier cpuidle et cpufreq
 			\item Energy Aware Scheduler
 		\end{itemize}
 	\end{block}
+}
 \end{frame}

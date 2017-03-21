@@ -12,12 +12,14 @@ suspend()    poweroff()
 resume()     restore()
 \end{verbatim}
 	\end{block}
+	\uncover<2->{
 	\begin{block}{Wakeup}
 		\begin{itemize}
 			\item \texttt{enable\_irq\_wake()}
 			\item \texttt{disable\_irq\_wake()}
 		\end{itemize}
 	\end{block}
+}
 \end{frame}
 \begin{frame}
 	\frametitle{Modes d'endormissement}
@@ -99,6 +101,7 @@ resume()     restore()
 			\item etc. (Anciens bindings)
 		\end{itemize}
 	\end{block}
+	\uncover<2->{
 	\begin{block}{sysfs}
 		\begin{itemize}
 			\item \texttt{enabled > /sys/devices/.../power/wakeup}
@@ -106,6 +109,7 @@ resume()     restore()
 		\end{itemize}
 	\end{block}
 	Consultation : \texttt{/sys/kernel/debug/wakeup\_sources}
+}
 \end{frame}
 
 
