@@ -1,0 +1,110 @@
+\documentclass{smilebeamer}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+\usepackage{hyperref}
+\usepackage{minted}
+
+\title{Measuring the impacts of the Preempt-RT patch}
+\author{maxime.chevallier@smile.fr}
+
+\begin{document}
+
+% Page titre, presentation de la société et de moi
+\begin{frame}[plain]
+	\title{Measuring the impacts of the Preempt-RT patch}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+	\frametitle{RT Linux projects}
+		\begin{itemize}
+			\item \textbf{Simulation platform} : bi-xeon, lots ot RAM \\ \small{\texttt{200µs wakeup latency, networking}}
+			\vspace{0.3cm}
+			\item \textbf{Test bench} : Intel atom \\ \small{\texttt{1s max latency, I/O and networking}}
+			\vspace{0.3cm}
+			\item \textbf{Embedded telematic board} : i.mx6q \\ \small{\texttt{Never lose incoming data}}
+			\vspace{0.3cm}
+			\item \textbf{Image processing} : Intel i3 \\ \small{\texttt{Process each frame with a deadline}}
+		\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{What is a RTOS ?}
+
+	\textbf{Real Time : Determinism}
+
+	\begin{itemize}
+		\item \textbf{Bounded Latencies} \\ \small{\textit{We need guaranties on the reaction time}}
+			\vspace{0.3cm}
+		\item \textbf{RT Scheduler} \\ \small{\textit{We want absolute priorities for the tasks}}
+			\vspace{0.3cm}
+		\item \textbf{Handle the complex cases} \\ \small{\textit{Priority Inversion, Starvations, etc.}}
+	\end{itemize}
+
+	{\small{Understanding a Real-Time System - Steven Rostedt}}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Linux}
+
+	\textbf{We have :}
+
+	\begin{itemize}
+		\item \textbf{RT Scheduler} {\small{\texttt{SCHED\_FIFO, SCHED\_RR, SCHED\_DEADLINE}}}
+		\item \textbf{PI mutexes} {\small{\texttt{futex, rt-mutex}}}
+		\item \textbf{Preemptible kernel} (almost)
+		\item \textbf{High resolution timers}  {\small{\texttt{nanosleep}}}
+	\end{itemize}
+
+	\textbf{We lack :}
+
+	\begin{itemize}
+		\item Full kernel preemption
+		\item Some worst case scenario optimisations
+	\end{itemize}
+\end{frame}
+
+% Use case réels ?
+
+% Presenter de quoi on va parler :
+% Lorsque l'on conçoit un systeme embarqué, differents choix découlent des specs :
+% Hardware : CPU, mémoire, périphériques selon besoins de ressources
+% Software : Noyau, librairies, application, build-system selon l'existant, temps de dev, maintenance, stabilité
+% On peut choisir d'utiliser linux pour beaucoup de raisons. Si en plus de ces raisons, on a besoin de déterminisme
+% et de comportement RT, alors on considere preempt-RT. mais linux-RT != linux. quelles differences? Comment les mesurer,
+% Ou chercher ? En plus de devoir maitriser son systeme pour développer son appli RT avec toutes les contraintes qui vont
+% avec, que reste-t-il pour le reste de mes specs ?
+
+%\begin{frame}
+%	\frametitle{Agenda}
+%	\begin{itemize}
+%		\item Pre-requisites
+%		\item What Preempt-RT changes
+%		\item How to measure that
+%		\item System configuration
+%	\end{itemize}
+%\end{frame}
+
+% Presenter preempt-RT
+% qui qui a fait, comment ça s'applique sur le noyau, status actuel
+% liste de ressources relatives a preempt-RT, comment le benchmarquer pour être
+% certain qu'on tient les specs, comment ça marche : plein de ressources disponibles.
+
+% idees reçues : Impact sur les perfs, instabilité, pas maintenu, difficile de dev kernel.
+
+
+%Include each section
+\input{01_Intro.tex}
+\input{02_Impacts_perf.tex}
+
+%Final frame
+\begin{frame}
+	\frametitle{C'est fini}
+	\center{\huge{Merci}}
+\end{frame}
+
+\end{document}
+

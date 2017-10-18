@@ -1,0 +1,9 @@
+\begin{frame}
+	\frametitle{Preempt RT - Internals}
+	\begin{itemize}
+		\item \textbf{Force threaded interrupts} \\ {\small{\texttt{Allows to prioritize interrupt handlers}}}
+		\item \textbf{Make locks sleepable and RT-aware} \\ {\small{\texttt{rt\_spinlocks, rt\_mutexes, semaphores, RCU}}}
+		\item \textbf{Remove critical sections} \\ {\small{\texttt{Avoid disabling preemption, interrupts, spinlocks, etc.}}}
+	\end{itemize}
+\end{frame}
+

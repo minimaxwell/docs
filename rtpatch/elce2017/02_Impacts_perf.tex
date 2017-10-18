@@ -1,0 +1,182 @@
+\begin{frame}
+	\frametitle{What about non-RT tasks ?}
+	\begin{itemize}
+		\item The kernel internals are changed
+		\item Kernel-userspace API/ABI stays the same
+		\item We have what is left of the resources :
+			\begin{itemize}
+				\item SCHED\_OTHER runs when no RT tasks run, whatever their priority
+				\item User configuration might dedicate some resources to RT tasks
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Firt steps}
+	\begin{itemize}
+		\item \textbf{Am I really running the RT patch ?} uname -a \\ \small{\texttt{cat /sys/kernel/realtime}}
+		\item \textbf{More tasks are running} htop \\ \small{\texttt{Threaded IRQs - beware of load-avg}}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{perf}
+	Performance analysis tool for Linux (from manpage)
+	\begin{itemize}
+		\item Uses the kernel performance counters
+		\item Generate traces
+		\item Versatile tool :
+			\begin{itemize}
+				\item debugging
+				\item profiling
+				\item benchmarking
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{perf - Vanilla linux}
+	\textbf{ping -f $<$ip$>$ -c 1000000}
+
+\texttt{3.26\%  ping  \_raw\_spin\_lock\_irqsave}
+
+\texttt{2.40\%  ping  entry\_SYSCALL\_64}
+
+\texttt{2.33\%  ping  \_raw\_spin\_lock}
+
+\texttt{2.26\%  ping  fib\_table\_lookup}
+
+\texttt{1.87\%  ping  insert\_work}
+
+\texttt{1.62\%  ping  \_raw\_spin\_unlock\_irqrestore}
+
+\texttt{1.60\%  ping  \_\_ip\_route\_output\_key\_hash}
+
+\texttt{1.56\%  ping  \_\_netif\_receive\_skb\_core}
+
+\texttt{1.53\%  ping  queue\_work\_on}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{perf - RT Linux}
+	\textbf{ping -f $<$ip$>$ -c 1000000}
+
+\texttt{5.53\%  ping check\_preemption\_disabled}
+
+\texttt{4.29\%  ping migrate\_enable}
+
+\texttt{3.29\%  ping \_\_bitmap\_equal}
+
+\texttt{2.56\%  ping migrate\_disable}
+
+\texttt{2.55\%  ping rt\_spin\_lock}
+
+\texttt{2.30\%  ping preempt\_count\_add}
+
+\texttt{2.29\%  ping rt\_spin\_unlock}
+
+\texttt{1.81\%  ping entry\_SYSCALL\_64}
+
+\texttt{1.28\%  ping preempt\_count\_sub}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{pidstat, vmstat, mpstat}
+Event analysis tools
+	\begin{itemize}
+		\item Analyse context switching
+		\item Interruptions
+		\item Cache misses
+		\item Page faults
+		\item branch prediction
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{*stat}
+	\begin{columns}
+		\begin{column}[t]{0.5\linewidth}
+\textbf{vmstat 1}
+
+\texttt{r in   cs}
+
+\texttt{1 2841 696381 }
+
+\texttt{2 2134 686653 }
+
+\texttt{2 1511 740010 }
+
+			\vspace{1cm}
+\textbf{pidstat -w 1}
+
+\texttt{cswch/s nvcswch/s  Command }
+
+\texttt{70443   76 stress-ng-fifo }
+
+\texttt{70571   61 stress-ng-fifo }
+
+\texttt{70587   52 stress-ng-fifo }
+
+		\end{column}
+		\begin{column}[t]{0.5\linewidth}
+			\begin{itemize}
+				\item \textbf{vmstat} \\ {\small{\texttt{Global memory stats}}}
+				\item \textbf{mpstat} \\ {\small{\texttt{per processor stats}}}
+				\item \textbf{pidstat}\\ {\small{\texttt{per task stats}}}
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Performance impacts : Preempt-RT}
+	\begin{itemize}
+		\item Syscalls : Expect an overhead
+		\item Locks : Futexes are made faster
+		\item Fifos, mqueues, pipes : Tend to get slower
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Performance impacts : Platform-dependent tweaking}
+\begin{itemize}
+	\item \textbf{CPU Idle states} : Use Poll or C1 \\ \small{\texttt{Increase power consumption}}
+	\vspace{0.3cm}
+	\item \textbf{Dynamic Voltage and Frequency Scaling} : Use a fixed frequency \\ \small{\texttt{Might increase power consumption}}
+	\vspace{0.3cm}
+	\item \textbf{Hyperthreading} : Disable it \\ \small{\texttt{Less processing power}}
+\end{itemize}
+	Reminder : Know your system (DMA, Resource sharing, SMM)	
+\end{frame}
+
+\begin{frame}
+	\frametitle{cpuidle, cpufreq}
+	\textbf{cpuidle in sysfs} : \texttt{/sys/devices/system/cpu/cpuX/stateY/}
+	\begin{itemize}
+		\item \texttt{name}
+		\item \texttt{latency} : \textit{wakeup latency}
+		\item \texttt{residency} : \textit{sleep time needed to enter}
+		\item \texttt{power} : \textit{power consumed in that state}
+	\end{itemize}
+
+	\vspace{1cm}
+	\textbf{powertop}
+
+	Allows to see C-state and frequency usage
+\end{frame}
+
+\begin{frame}
+	\frametitle{networking}
+
+	\textbf{lmbench} : Micro benchmarks suite
+
+	\begin{itemize}
+		\item \textbf{tcp\_lat, udp\_lat} : Hot potato benchmark
+		\item Easy to combine with perf
+	\end{itemize}
+
+	\textbf{iperf}
+
+\end{frame}

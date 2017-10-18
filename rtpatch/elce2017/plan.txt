@@ -1,0 +1,9 @@
+# 1 Pres preempt-rt
+	- cékoi preempt
+	- déterminisme implique plein de configs
+# 2 Impacts CPU
+	- raw cpu : ctx switch
+	- scheduling
+	- IRQ handling ?
+# 3 Impacts mem access
+# 4 Impacts power
