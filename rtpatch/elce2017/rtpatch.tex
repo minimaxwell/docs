@@ -22,11 +22,11 @@
 		\begin{itemize}
 			\item \textbf{Simulation platform} : bi-xeon, lots ot RAM \\ \small{\texttt{200µs wakeup latency, networking}}
 			\vspace{0.3cm}
-			\item \textbf{Test bench} : Intel atom \\ \small{\texttt{1s max latency, I/O and networking}}
+			\item \textbf{Test bench} : Intel atom \\ \small{\textit{1s max latency, I/O and networking}}
 			\vspace{0.3cm}
-			\item \textbf{Embedded telematic board} : i.mx6q \\ \small{\texttt{Never lose incoming data}}
+			\item \textbf{Embedded telematic board} : i.mx6q \\ \small{\textit{Never lose incoming data}}
 			\vspace{0.3cm}
-			\item \textbf{Image processing} : Intel i3 \\ \small{\texttt{Process each frame with a deadline}}
+			\item \textbf{Image processing} : Intel i3 \\ \small{\textit{Process each frame with a deadline}}
 		\end{itemize}
 \end{frame}
 
@@ -43,8 +43,6 @@
 		\item \textbf{Handle the complex cases} \\ \small{\textit{Priority Inversion, Starvations, etc.}}
 	\end{itemize}
 
-	{\small{Understanding a Real-Time System - Steven Rostedt}}
-
 \end{frame}
 
 \begin{frame}
@@ -54,16 +52,16 @@
 
 	\begin{itemize}
 		\item \textbf{RT Scheduler} {\small{\texttt{SCHED\_FIFO, SCHED\_RR, SCHED\_DEADLINE}}}
-		\item \textbf{PI mutexes} {\small{\texttt{futex, rt-mutex}}}
+		\item \textbf{PI mutexes} {\small{\textit{futex, rt-mutex}}}
 		\item \textbf{Preemptible kernel} (almost)
-		\item \textbf{High resolution timers}  {\small{\texttt{nanosleep}}}
+		\item \textbf{High resolution timers}  {\small{\textit{nanosleep}}}
 	\end{itemize}
 
 	\textbf{We lack :}
 
 	\begin{itemize}
-		\item Full kernel preemption
-		\item Some worst case scenario optimisations
+		\item \textbf{Full kernel preemption} \\ {\small{\textit{A lot of critical sections are present}}}
+		\item \textbf{Some worst case scenario optimisations} \\ {\small{\textit{Mostly arch/driver specific, to be mainlined}}}
 	\end{itemize}
 \end{frame}
 
@@ -100,10 +98,25 @@
 \input{01_Intro.tex}
 \input{02_Impacts_perf.tex}
 
+\begin{frame}
+	\frametitle{Useful resources}
+	\begin{itemize}
+		\item Who needs a Real-Time Operating System (Not You!) \\ {\small{\textit{Steven Rostedt, Kernel Recipes 2016}}}
+			\vspace{0.2cm}
+		\item Understanding a Real-Time System (More than just a kernel) \\ {\small{\textit{Steven Rostedt, Kernel Recipes 2016}}}
+			\vspace{0.2cm}
+		\item SCHED\_DEADLINE: It's Alive! \\ {\small{\textit{Juri Lelli, ELC 2016}}}
+			\vspace{0.2cm}
+		\item Real-Time Linux on Embedded Multicore Processors \\ {\small{\textit{Andreas Ehmanns, ELC 2016}}}
+			\vspace{0.2cm}
+		\item IRQs: the Hard, the Soft, the Threaded and the Preemptible \\ {\small{\textit{Alison Chaiken, ELCE 2016}}}
+	\end{itemize}
+\end{frame}
+
 %Final frame
 \begin{frame}
-	\frametitle{C'est fini}
-	\center{\huge{Merci}}
+	\frametitle{That's it}
+	\center{\huge{Thank you !}}
 \end{frame}
 
 \end{document}

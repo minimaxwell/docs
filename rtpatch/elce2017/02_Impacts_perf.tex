@@ -15,13 +15,13 @@
 	\frametitle{Firt steps}
 	\begin{itemize}
 		\item \textbf{Am I really running the RT patch ?} uname -a \\ \small{\texttt{cat /sys/kernel/realtime}}
-		\item \textbf{More tasks are running} htop \\ \small{\texttt{Threaded IRQs - beware of load-avg}}
+		\item \textbf{More tasks are running} htop \\ \small{\textit{Threaded IRQs - beware of load-avg}}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{perf}
-	Performance analysis tool for Linux (from manpage)
+	\textbf{Performance analysis tool for Linux (from manpage)}
 	\begin{itemize}
 		\item Uses the kernel performance counters
 		\item Generate traces
@@ -38,7 +38,7 @@
 	\frametitle{perf - Vanilla linux}
 	\textbf{ping -f $<$ip$>$ -c 1000000}
 
-\texttt{3.26\%  ping  \_raw\_spin\_lock\_irqsave}
+	\texttt{3.26\%  ping }\textbf{\_raw\_spin\_lock\_irqsave}
 
 \texttt{2.40\%  ping  entry\_SYSCALL\_64}
 
@@ -70,11 +70,11 @@
 
 \texttt{2.56\%  ping migrate\_disable}
 
-\texttt{2.55\%  ping rt\_spin\_lock}
+\texttt{2.55\%  ping }\textbf{rt\_spin\_lock}
 
 \texttt{2.30\%  ping preempt\_count\_add}
 
-\texttt{2.29\%  ping rt\_spin\_unlock}
+\texttt{2.29\%  ping }\textbf{rt\_spin\_unlock}
 
 \texttt{1.81\%  ping entry\_SYSCALL\_64}
 
@@ -113,19 +113,114 @@ Event analysis tools
 
 \texttt{cswch/s nvcswch/s  Command }
 
-\texttt{70443   76 stress-ng-fifo }
+\texttt{70443   76         stress-ng-fifo }
 
-\texttt{70571   61 stress-ng-fifo }
+\texttt{70571   61         stress-ng-fifo }
 
-\texttt{70587   52 stress-ng-fifo }
+\texttt{70587   52         stress-ng-fifo }
 
 		\end{column}
 		\begin{column}[t]{0.5\linewidth}
 			\begin{itemize}
-				\item \textbf{vmstat} \\ {\small{\texttt{Global memory stats}}}
-				\item \textbf{mpstat} \\ {\small{\texttt{per processor stats}}}
-				\item \textbf{pidstat}\\ {\small{\texttt{per task stats}}}
+				\item \textbf{vmstat} \\ {\small{\textit{Global memory stats}}}
+				\item \textbf{mpstat} \\ {\small{\textit{per processor stats}}}
+				\item \textbf{pidstat}\\ {\small{\textit{per task stats}}}
 			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Another example : ping -f}
+	\begin{columns}
+		\begin{column}[t]{0.3\linewidth}
+			\begin{block}{vmstat}
+				\uncover<1->{
+			\textbf{vanilla}
+
+			\texttt{in cs}
+
+			\texttt{14363 218}
+
+			\texttt{14565 283}
+
+			\texttt{14340 91}
+		}
+
+		\uncover<2->{
+			\textbf{Preempt RT}
+				\vspace{0.2cm}
+
+			\texttt{in cs}
+
+			\texttt{14414 29091}
+
+			\texttt{14397 29052}
+
+			\texttt{14390 29007}
+				}
+			\end{block}
+		\end{column}
+		\begin{column}[t]{0.7\linewidth}
+			\begin{block}<3->{mpstat -w}
+
+		\texttt{cswch/s  Command}
+
+		\texttt{14280   irq/35-enp14s0}
+			\end{block}
+			\uncover<4->{
+			\begin{itemize}
+				\item Effect of threaded interrupts
+				\item iperf show no bandwidth difference
+				\item This IRQ can now be prioritized
+			\end{itemize}
+			}
+		\end{column}
+	\end{columns}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{stress-ng}
+	\textbf{stress-ng}
+	\begin{itemize}
+		\item Has stressors for a lot of components
+		\item Can be used as a 'rough' benchmarking tool
+		\item use \texttt{--XXX-ops} and compare execution time
+		\item Beware, extreme scenarios unlikely to happen in real-life
+	\end{itemize}
+
+	\begin{columns}
+		\begin{column}[t]{0.3\linewidth}
+			\uncover<2->{
+			\textbf{stressor} \\
+			\texttt{cpu} \\
+			\texttt{fault} \\
+			\texttt{fifo} \\
+			\texttt{futex} \\
+			\texttt{hdd}
+			}
+		\end{column}
+		\begin{column}[t]{0.3\linewidth}
+			\uncover<3->{
+			\textbf{vanilla} \\
+			\texttt{11.23 s} \\
+			\texttt{8.94 s} \\
+			\texttt{8.24 s} \\
+			\texttt{13.11 s} \\
+			\texttt{8.75 s}
+			}
+		\end{column}
+		\begin{column}[t]{0.3\linewidth}
+			\uncover<4->{
+			\textbf{preempt RT} \\
+			\texttt{11.26 s} \\
+			\texttt{14.51 s} \\
+			\texttt{69.44 s} \\
+			\texttt{7.85 s} \\
+			\texttt{8.88 s}
+			}
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -142,13 +237,12 @@ Event analysis tools
 \begin{frame}
 	\frametitle{Performance impacts : Platform-dependent tweaking}
 \begin{itemize}
-	\item \textbf{CPU Idle states} : Use Poll or C1 \\ \small{\texttt{Increase power consumption}}
+	\item \textbf{CPU Idle states} : Use Poll or C1 \\ \small{\textit{Increase power consumption}}
 	\vspace{0.3cm}
-	\item \textbf{Dynamic Voltage and Frequency Scaling} : Use a fixed frequency \\ \small{\texttt{Might increase power consumption}}
+	\item \textbf{Dynamic Voltage and Frequency Scaling} : Use a fixed frequency \\ \small{\textit{Might increase power consumption}}
 	\vspace{0.3cm}
-	\item \textbf{Hyperthreading} : Disable it \\ \small{\texttt{Less processing power}}
+	\item \textbf{Hyperthreading} : Disable it \\ \small{\textit{Less processing power}}
 \end{itemize}
-	Reminder : Know your system (DMA, Resource sharing, SMM)	
 \end{frame}
 
 \begin{frame}
@@ -167,16 +261,4 @@ Event analysis tools
 	Allows to see C-state and frequency usage
 \end{frame}
 
-\begin{frame}
-	\frametitle{networking}
 
-	\textbf{lmbench} : Micro benchmarks suite
-
-	\begin{itemize}
-		\item \textbf{tcp\_lat, udp\_lat} : Hot potato benchmark
-		\item Easy to combine with perf
-	\end{itemize}
-
-	\textbf{iperf}
-
-\end{frame}
