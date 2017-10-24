@@ -85,6 +85,8 @@
 \begin{frame}
 	\frametitle{pidstat, vmstat, mpstat}
 Event analysis tools
+\begin{columns}
+	\begin{column}[t]{0.55\linewidth}
 	\begin{itemize}
 		\item Analyse context switching
 		\item Interruptions
@@ -92,81 +94,77 @@ Event analysis tools
 		\item Page faults
 		\item branch prediction
 	\end{itemize}
+\end{column}
+\begin{column}[t]{0.45\linewidth}
+	\begin{itemize}
+		\item \textbf{vmstat} \\ {\small{\textit{Global memory stats}}}
+		\item \textbf{mpstat} \\ {\small{\textit{per processor stats}}}
+		\item \textbf{pidstat}\\ {\small{\textit{per task stats}}}
+	\end{itemize}
+\end{column}
+\end{columns}
 \end{frame}
 
-\begin{frame}
-	\frametitle{*stat}
-	\begin{columns}
-		\begin{column}[t]{0.5\linewidth}
+\begin{frame}[fragile]
+	\frametitle{*stat, with stress-ng --fifo}
 \textbf{vmstat 1}
 
-\texttt{r in   cs}
+\verb+r in   cs+
 
-\texttt{1 2841 696381 }
+\verb+1 2841 696381 +
 
-\texttt{2 2134 686653 }
+\verb+2 2134 686653 +
 
-\texttt{2 1511 740010 }
+\verb+2 1511 740010 +
 
 			\vspace{1cm}
 \textbf{pidstat -w 1}
 
-\texttt{cswch/s nvcswch/s  Command }
+\verb+cswch/s nvcswch/s  Command +
 
-\texttt{70443   76         stress-ng-fifo }
+\verb+70443   76         stress-ng-fifo +
 
-\texttt{70571   61         stress-ng-fifo }
+\verb+70571   61         stress-ng-fifo +
 
-\texttt{70587   52         stress-ng-fifo }
+\verb+70587   52         stress-ng-fifo +
 
-		\end{column}
-		\begin{column}[t]{0.5\linewidth}
-			\begin{itemize}
-				\item \textbf{vmstat} \\ {\small{\textit{Global memory stats}}}
-				\item \textbf{mpstat} \\ {\small{\textit{per processor stats}}}
-				\item \textbf{pidstat}\\ {\small{\textit{per task stats}}}
-			\end{itemize}
-		\end{column}
-	\end{columns}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 	\frametitle{Another example : ping -f}
+
+	{\center{\textbf{Receiving a ping flood}}}
+
 	\begin{columns}
 		\begin{column}[t]{0.3\linewidth}
-			\begin{block}{vmstat}
-				\uncover<1->{
-			\textbf{vanilla}
+			\begin{block}<1->{vmstat - vanilla}
 
-			\texttt{in cs}
+			\verb+ in    cs +
 
-			\texttt{14363 218}
+			\verb+ 14363 218 +
 
-			\texttt{14565 283}
+			\verb+ 14565 283 +
 
-			\texttt{14340 91}
-		}
+			\verb+ 14340 91 +
 
-		\uncover<2->{
-			\textbf{Preempt RT}
-				\vspace{0.2cm}
+			\end{block}
+			\begin{block}<2->{vmstat - RT}
 
-			\texttt{in cs}
+			\verb+ in    cs +
 
-			\texttt{14414 29091}
+			\verb+ 14414 29091 +
 
-			\texttt{14397 29052}
+			\verb+ 14397 29052 +
 
-			\texttt{14390 29007}
-				}
+			\verb+ 14390 29007 +
 			\end{block}
 		\end{column}
 		\begin{column}[t]{0.7\linewidth}
-			\begin{block}<3->{mpstat -w}
+			\begin{block}<3->{pidstat -w}
 
-		\texttt{cswch/s  Command}
+		\verb+cswch/s  Command+
 
-		\texttt{14280   irq/35-enp14s0}
+		\verb+14280    irq/35-enp14s0+
 			\end{block}
 			\uncover<4->{
 			\begin{itemize}
@@ -245,8 +243,9 @@ Event analysis tools
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 	\frametitle{cpuidle, cpufreq}
+	\uncover<1->{
 	\textbf{cpuidle in sysfs} : \texttt{/sys/devices/system/cpu/cpuX/stateY/}
 	\begin{itemize}
 		\item \texttt{name}
@@ -254,11 +253,23 @@ Event analysis tools
 		\item \texttt{residency} : \textit{sleep time needed to enter}
 		\item \texttt{power} : \textit{power consumed in that state}
 	\end{itemize}
+	}
 
-	\vspace{1cm}
-	\textbf{powertop}
+	\begin{block}<2->{CPUidle : Core i5-6300U}
+	\verb+name      latency	  residency+
 
-	Allows to see C-state and frequency usage
+	\verb+POLL      0         0+
+
+	\verb+C1-SKL    2         2+
+
+	\verb+C1E-SKL   10        20+
+
+	\verb+C3-SKL    70        100+
+
+	\verb+[...]+
+
+	\verb+C10-SKL   890       5000+
+\end{block}
 \end{frame}
 
 
